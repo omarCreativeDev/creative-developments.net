@@ -1,0 +1,150 @@
+@import 'mixins';
+
+.no-line-height {
+  line-height: 0;
+}
+.underline {
+  text-decoration: underline;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.relative {
+  position: relative;
+}
+
+.vertical-align-top {
+  vertical-align: top;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/**
+ Clearfix
+ */
+.cf {
+  @include clearfix();
+}
+
+.break-word {
+  word-break: break-word;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.center-align {
+  text-align: center;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.justify-flex-end {
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.justify-start {
+  justify-content: start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.flex-direction-row {
+  flex-direction: row;
+}
+
+.flex-one-auto {
+  flex: 1 0 auto;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.align-items-stretch {
+  align-items: stretch;
+}
+
+.align-self-start {
+  align-self: flex-start;
+}
+
+.horizontal-scroll {
+  overflow-x: scroll;
+}
+
+.ellipsis {
+  @include ellipsis();
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.auto-margin {
+  margin: 0 auto;
+}

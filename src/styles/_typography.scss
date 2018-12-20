@@ -1,0 +1,54 @@
+@import 'variables';
+@import 'mixins';
+
+html {
+  font-size: 62.5%;
+  font-family: $body-font-family;
+  color: $primary-color;
+}
+
+body {
+  font-size: $base-font-size;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+strong,
+.bold {
+  font-weight: 400;
+}
+
+ol,
+p,
+ul {
+  margin: 0 0 1rem;
+}
+
+a,
+.link {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.italic {
+  font-style: italic;
+}
+
+h1 {
+  @include h1();
+}
+
+h2 {
+  @include h2();
+}
+
+h3 {
+  @include h3();
+}
+.error-color {
+  color: $alizarin-crimson;
+}
