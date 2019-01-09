@@ -25,13 +25,19 @@ ul {
 }
 
 a,
+a:hover,
+a:visited,
 .link {
-  color: $primary-color;
-  text-decoration: none;
+  color: $secondary-color;
+  text-decoration: underline;
 }
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.no-underline {
+  text-decoration: none;
 }
 
 .italic {

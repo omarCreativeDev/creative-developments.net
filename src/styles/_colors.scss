@@ -2,4 +2,16 @@
 $mine-shaft: #303030;
 $white: #fff;
 
-$alizarin-crimson: #E31B23;
+$light-green: #b5d443;
+$dark-green: #73990b;
+
+$picton-blue: #45C1F4;
+$boston-blue: #3192BF;
+
+$alizarin-crimson: #e31b23;
+$radical-red: #f92f4a;
+
+.skype-color,
+.twitter-color { color: $picton-blue; }
+.linked-in-color { color: $boston-blue; }
+.google-plus-color { color: $radical-red; }
