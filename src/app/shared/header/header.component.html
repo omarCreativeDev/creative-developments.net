@@ -2,53 +2,58 @@
   <div class="header__top-nav container flex justify-space-between p-t-10 p-b-10">
     <div class="header__social-media">
       <a href="skype:omar.creativedevelopments.net?call" title="Skype: omar.creativedevelopments.net"
-         target="_blank" class="header__nav-link p-r-20">
+         target="_blank" class="header__social-link p-r-20">
         <fa-icon class="p-r-5 skype-color" [icon]="faSkype"></fa-icon>
         Skype
       </a>
 
       <a href="https://www.linkedin.com/in/omarcreativedev" title="LinkedIn: Omar Mirza" target="_blank"
-         class="header__nav-link p-r-20">
+         class="header__social-link p-r-20">
         <fa-icon class="p-r-5 linked-in-color" [icon]="faLinkedinIn"></fa-icon>
         LinkedIn
       </a>
 
       <a href="https://plus.google.com/u/0/108712254152026254053/about" title="Google Plus: Omar Mirza"
-         target="_blank" class="header__nav-link p-r-20">
+         target="_blank" class="header__social-link p-r-20">
         <fa-icon class="p-r-5 google-plus-color" [icon]="faGooglePlusG"></fa-icon>
         Google Plus
       </a>
 
       <a href="https://twitter.com/OmarCreativeDev" title="Twitter: OmarCreativeDev" target="_blank"
-         class="header__nav-link">
+         class="header__social-link">
         <fa-icon class="p-r-5 twitter-color" [icon]="faTwitter"></fa-icon>
         Twitter
       </a>
     </div>
     <div class="header__misc-links d-none d-md-block">
-      <span class="header__nav-link p-r-20">
+      <span class="header__social-link p-r-20">
         <fa-icon class="p-r-5" [icon]="faPrint"></fa-icon>
         Print this page
       </span>
 
-      <a class="header__nav-link" href="/sitemap.html">
+      <a class="header__social-link" href="/sitemap.html">
         <fa-icon class="p-r-5" [icon]="faSitemap"></fa-icon>
         Sitemap
       </a>
     </div>
   </div>
-  <div class="header__body">
-    <div class="container flex">
+  <div class="header__logo-bg">
+    <div class="container d-block d-lg-none">
       <a class="header__logo" href="/">Creative <span>Developments</span></a>
+    </div>
+  </div>
+  <div class="header__nav-bg">
+    <div class="container">
+      <a class="header__logo d-none d-lg-block" href="/">Creative <span>Developments</span></a>
       <nav class="header__nav">
-        <ul>
-          <li><a href="/" title="Home">HOME</a></li>
-          <li><a href="/about-me.html" title="About Me">ABOUT ME</a></li>
-          <li><a href="/portfolio/" title="Portfolio">PORTFOLIO</a></li>
-          <li><a href="/hire-me.html" title="Hire Me">HIRE ME</a></li>
-          <li><a href="/services/" title="Services">SERVICES</a></li>
-          <li><a href="/my-skills.html" title="My SKills">MY SKILLS</a></li>
-          <li><a href="/contact-me.html" title="Contact Me">CONTACT ME</a></li>
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a class="header__nav-link" href="/" title="Home">HOME</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="/about-me.html" title="About Me">ABOUT ME</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="/portfolio/" title="Portfolio">PORTFOLIO</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="/hire-me.html" title="Hire Me">HIRE ME</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="/services/" title="Services">SERVICES</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="/my-skills.html" title="My SKills">MY SKILLS</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="/contact-me.html" title="Contact Me">CONTACT ME</a></li>
         </ul>
       </nav>
     </div>

@@ -1,10 +1,39 @@
 @import '../../../styles/variables';
+@import '../../../styles/mixins';
 
-.header__body {
- background-color: $mine-shaft;
-}
-.header__nav-link {
+.header__social-link {
   color: $primary-color;
   text-decoration: none;
   font-size: 1.2rem;
+}
+.header__logo {
+  font-family: $font-family-trajan;
+  font-size: 2.5rem;
+  text-decoration: none;
+}
+.header__logo-bg {
+  background-color: $mine-shaft;
+  padding: 4.0rem 0;
+}
+.header__nav-bg {
+  background: linear-gradient(to bottom, $gallery 50%, $mercury 50%) no-repeat;
+  border-top: solid 1px $silver;
+  border-bottom: solid 1px $silver;
+}
+.header__nav-list {
+  margin: 0;
+  padding: 0;
+}
+.header__nav-item {
+  display: inline-flex;
+}
+.header__nav-link {
+  padding: 12px 10px;
+  color: $mine-shaft;
+  text-decoration: none;
+}
+
+.header__nav-link:hover {
+  background: $mine-shaft;
+  color: $light-green;
 }

@@ -1,4 +1,5 @@
 @import "colors";
+@import "variables";
 
 @mixin clearfix() {
   &:before,
@@ -28,4 +29,9 @@
 
 @mixin h3() {
   font-size: 2.0rem;
+}
+
+@mixin palatinoFont() {
+  font-weight: normal;
+  font-family: $font-family-palatino;
 }
