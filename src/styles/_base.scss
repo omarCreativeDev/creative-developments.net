@@ -1,11 +1,8 @@
 @import 'variables';
-@import '~bootstrap/scss/bootstrap-reboot';
-@import '~bootstrap/scss/bootstrap-grid';
+@import '~bootstrap/scss/bootstrap';
 
 // common
 @import 'fonts';
-@import 'helpers';
 @import 'typography';
 @import 'forms';
 @import 'buttons';
-@import 'spacing-helpers';
