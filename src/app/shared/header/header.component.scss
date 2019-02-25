@@ -10,10 +10,11 @@
   font-family: $font-family-trajan;
   font-size: 2.5rem;
   text-decoration: none;
+  padding-top: 4.0rem;
+  padding-bottom: 4.0rem;
 }
 .header__logo-bg {
   background-color: $mine-shaft;
-  padding: 4.0rem 0;
 }
 .header__nav-bg {
   background: linear-gradient(to bottom, $gallery 50%, $mercury 50%) no-repeat;
@@ -27,13 +28,13 @@
 .header__nav-item {
   display: inline-flex;
 }
+
 .header__nav-link {
-  padding: 12px 10px;
-  color: $mine-shaft;
+  padding: 12px 12px 12px 0;
+  color: $white;
   text-decoration: none;
 }
 
 .header__nav-link:hover {
-  background: $mine-shaft;
   color: $light-green;
 }
