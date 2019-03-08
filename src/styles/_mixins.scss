@@ -1,17 +1,6 @@
 @import "colors";
 @import "variables";
 
-@mixin clearfix() {
-  &:before,
-  &:after {
-    content: '';
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
-}
-
 @mixin ellipsis() {
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -34,4 +23,10 @@
 @mixin palatinoFont() {
   font-weight: normal;
   font-family: $font-family-palatino;
+}
+
+@mixin bannerBg() {
+  background: url('~/assets/images/banner-bg-top.png') top repeat-x,
+              url('~/assets/images/banner-bg-bottom.png') bottom repeat-x,
+              $mine-shaft;
 }
