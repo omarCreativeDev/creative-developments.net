@@ -2,13 +2,12 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-6 col-md-6">
-        <span>
-            <i class="fa fa-code" aria-hidden="true"></i>
-            Designing, Developing &amp; Freelancing
-        </span>
-        <div class="col-sm-6 col-md-6">
-          <span>Back to Top <i class="fa fa-arrow-up"></i></span>
-        </div>
+        <fa-icon class="pr-2" [icon]="faCode"></fa-icon>
+        Developing &amp; freelancing
+      </div>
+      <div class="col-sm-6 col-md-6 text-right">
+        Back to Top
+        <fa-icon class="pl-2" [icon]="faArrowUp"></fa-icon>
       </div>
     </div>
   </div>
@@ -107,7 +106,7 @@
       <div class="col-sm-6 col-md-6">
         <span>&copy; Copyright {{ currentYear() }}> Creative Developments.net. All rights reserved.</span>
       </div>
-      <div class="col-sm-6 col-md-6">
+      <div class="col-sm-6 col-md-6 text-right">
         <a href="/">Creative <span>Developments</span>.net</a>
       </div>
     </div>
