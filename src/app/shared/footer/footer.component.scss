@@ -2,5 +2,20 @@
 @import '../../../styles/mixins';
 
 .footer__nav-bg {
+  padding: 6.0rem 0;
   @include bannerBg();
+}
+.footer__nav-list,
+.footer__nav-link {
+  color: $white;
+}
+.footer__nav-link {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.footer__nav-title {
+  text-transform: uppercase;
 }
