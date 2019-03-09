@@ -17,5 +17,7 @@
   }
 }
 .footer__nav-title {
-  text-transform: uppercase;
+  font-size: 1.8rem;
+  @include trajanProFont();
+  color: $secondary-color;
 }

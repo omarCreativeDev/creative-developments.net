@@ -25,6 +25,11 @@
   font-family: $font-family-palatino;
 }
 
+@mixin trajanProFont() {
+  font-weight: normal;
+  font-family: $font-family-trajan;
+}
+
 @mixin bannerBg() {
   background: url('~/assets/images/banner-bg-top.png') top repeat-x,
               url('~/assets/images/banner-bg-bottom.png') bottom repeat-x,
