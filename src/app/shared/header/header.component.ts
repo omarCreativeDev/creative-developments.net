@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faSkype, faTwitter, faGooglePlusG, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faSkype, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faPrint, faSitemap } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 
@@ -12,7 +12,6 @@ export class HeaderComponent {
   public faSkype: IconDefinition = faSkype;
   public faLinkedinIn: IconDefinition = faLinkedinIn;
   public faTwitter: any = faTwitter;
-  public faGooglePlusG: IconDefinition = faGooglePlusG;
   public faPrint: IconDefinition = faPrint;
   public faSitemap: IconDefinition = faSitemap;
 }
