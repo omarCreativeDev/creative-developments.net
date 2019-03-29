@@ -11,6 +11,7 @@ addons:
       - google-chrome
     packages:
       - google-chrome-stable
+      - sshpass
 
 cache:
   directories:
@@ -20,11 +21,9 @@ install:
   - npm install
 
 script:
-  - npm run test --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
+  - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
 
 after_success:
-  - sh travis_merge_script.sh
-
-stage: "Deploy"
-  script:
-    - npm run build
+  - sh travis-merge-script.sh
+  - npm run build -- --prod
+  - sh travis-deploy-script.sh
