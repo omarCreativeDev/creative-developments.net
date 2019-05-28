@@ -14,4 +14,8 @@ export class HeaderComponent {
   public faTwitter: any = faTwitter;
   public faPrint: IconDefinition = faPrint;
   public faSitemap: IconDefinition = faSitemap;
+
+  public print(): void {
+    window.print();
+  }
 }

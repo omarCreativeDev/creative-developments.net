@@ -1,5 +1,5 @@
-@import '../../../styles/variables';
-@import '../../../styles/mixins';
+@import '~src/styles/variables';
+@import '~src/styles/mixins';
 
 .header__social-link {
   color: $primary-color;
@@ -7,7 +7,7 @@
   font-size: 1.2rem;
 }
 .header__social-icon {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 .header__logo {
   font-family: $font-family-trajan;
