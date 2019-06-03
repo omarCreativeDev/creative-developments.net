@@ -2,30 +2,37 @@
   <div class="container py-4">
     <div class="row">
       <div class="col-sm-12 col-md-8">
-        <a href="skype:omar.creativedevelopments.net?call" title="Skype: omar.creativedevelopments.net"
-           target="_blank" class="header__social-link pr-4">
-          <fa-icon class="pr-2 skype-color header__social-icon" [icon]="faSkype"></fa-icon>
-          Skype
+        <a
+          href="skype:omar.creativedevelopments.net?call"
+          title="Skype: omar.creativedevelopments.net"
+          target="_blank"
+          class="header__social-link pr-4 d-inline-flex align-items-center no-underline"
+        >
+          <fa-icon class="pr-3 skype-color header__social-icon" [icon]="faSkype"></fa-icon>Skype
         </a>
-        <a href="https://www.linkedin.com/in/omarcreativedev" title="LinkedIn: Omar Mirza" target="_blank"
-           class="header__social-link pr-4">
-          <fa-icon class="pr-2 linked-in-color header__social-icon" [icon]="faLinkedinIn"></fa-icon>
-          LinkedIn
+        <a
+          href="https://www.linkedin.com/in/omarcreativedev"
+          title="LinkedIn: Omar Mirza"
+          target="_blank"
+          class="header__social-link pr-4 d-inline-flex align-items-center no-underline"
+        >
+          <fa-icon class="pr-3 linked-in-color header__social-icon" [icon]="faLinkedinIn"></fa-icon>LinkedIn
         </a>
-        <a href="https://twitter.com/OmarCreativeDev" title="Twitter: OmarCreativeDev" target="_blank"
-           class="header__social-link">
-          <fa-icon class="pr-2 twitter-color header__social-icon" [icon]="faTwitter"></fa-icon>
-          Twitter
+        <a
+          href="https://twitter.com/OmarCreativeDev"
+          title="Twitter: OmarCreativeDev"
+          target="_blank"
+          class="header__social-link d-inline-flex align-items-center no-underline"
+        >
+          <fa-icon class="pr-3 twitter-color header__social-icon" [icon]="faTwitter"></fa-icon>Twitter
         </a>
       </div>
       <div class="col-md-4 text-right d-none d-md-block">
-        <span class="header__social-link pr-4">
-          <fa-icon class="pr-2 header__social-icon" [icon]="faPrint"></fa-icon>
-          Print page
-        </span>
-        <a class="header__social-link" href="/sitemap.html">
-          <fa-icon class="pr-2 header__social-icon" [icon]="faSitemap"></fa-icon>
-          Sitemap
+        <a href="#" class="header__social-link pr-4 d-inline-flex align-items-center no-underline" (click)="print()">
+          <fa-icon class="pr-3 header__social-icon" [icon]="faPrint"></fa-icon>Print page
+        </a>
+        <a class="header__social-link d-inline-flex align-items-center no-underline" [routerLink]="['/sitemap']">
+          <fa-icon class="pr-3 header__social-icon" [icon]="faSitemap"></fa-icon>Sitemap
         </a>
       </div>
     </div>
@@ -33,29 +40,33 @@
   <div class="header__nav-bg">
     <div class="container h-100">
       <div class="row align-items-center h-100">
-        <a class="header__logo col-sm-12 col-lg-5" href="/"><span class="text-white">Creative</span> Developments</a>
+        <a class="header__logo col-sm-12 col-lg-5 no-underline" [routerLink]="['/']"
+          ><span class="text-white">Creative</span> Developments</a
+        >
         <nav class="col-lg-7 text-lg-right">
           <ul class="m-0 px-0 pb-5 pb-lg-0">
             <li class="d-inline-flex">
-              <a class="header__nav-link" href="/" title="Home">HOME</a>
+              <a class="header__nav-link no-underline" [routerLink]="['/']" title="Home">HOME</a>
             </li>
             <li class="d-inline-flex">
-              <a class="header__nav-link" href="/about-me.html" title="About Me">ABOUT</a>
+              <a class="header__nav-link no-underline" [routerLink]="['/about-me']" title="About Me">ABOUT</a>
             </li>
             <li class="d-inline-flex">
-              <a class="header__nav-link" href="/portfolio/" title="Portfolio">PORTFOLIO</a>
+              <a class="header__nav-link no-underline" [routerLink]="['/portfolio/']" title="Portfolio">PORTFOLIO</a>
             </li>
             <li class="d-inline-flex">
-              <a class="header__nav-link" href="/hire-me.html" title="Hire Me">HIRE ME</a>
+              <a class="header__nav-link no-underline" [routerLink]="['/hire-me']" title="Hire Me">HIRE ME</a>
             </li>
             <li class="d-inline-flex">
-              <a class="header__nav-link" href="/services/" title="Services">SERVICES</a>
+              <a class="header__nav-link no-underline" [routerLink]="['/services/']" title="Services">SERVICES</a>
             </li>
             <li class="d-inline-flex">
-              <a class="header__nav-link" href="/my-skills.html" title="My SKills">SKILLS</a>
+              <a class="header__nav-link no-underline" [routerLink]="['/my-skills']" title="My SKills">SKILLS</a>
             </li>
             <li class="d-inline-flex">
-              <a class="header__nav-link pr-lg-0" href="/contact-me.html" title="Contact Me">CONTACT</a>
+              <a class="header__nav-link no-underline pr-lg-0" [routerLink]="['/contact-me']" title="Contact Me"
+                >CONTACT</a
+              >
             </li>
           </ul>
         </nav>
