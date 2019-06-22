@@ -17,14 +17,33 @@
         <div class="col-sm-4">
           <dl class="footer__nav-list">
             <dt class="footer__nav-title pb-5">Cross <span class="text-white">browser</span> support</dt>
-            <dd><i class="fa fa-internet-explorer darkBlue large"></i></dd>
-            <dd><i class="fa fa-opera red large"></i></dd>
-            <dd><i class="fa fa-firefox orange large"></i></dd>
-            <dd><i class="fa fa-chrome yellow large"></i></dd>
-            <dd><i class="fa fa-safari lightBlue large"></i></dd>
-            <dd><i class="fa fa-android green large"></i></dd>
-            <dd><i class="fa fa-apple grey large"></i></dd>
-            <dd><i class="fa fa-linux white large"></i></dd>
+            <dd class="d-inline-flex pr-4 pb-4">
+              <fa-icon
+                class="d-inline-flex fa-internet-explorer footer__browser-icon"
+                [icon]="faInternetExplorer"
+              ></fa-icon>
+            </dd>
+            <dd class="d-inline-flex pr-4 pb-4">
+              <fa-icon class="d-inline-flex fa-opera footer__browser-icon" [icon]="faOpera"></fa-icon>
+            </dd>
+            <dd class="d-inline-flex pr-4 pb-4">
+              <fa-icon class="d-inline-flex fa-firefox footer__browser-icon" [icon]="faFirefox"></fa-icon>
+            </dd>
+            <dd class="d-inline-flex pr-4 pb-4">
+              <fa-icon class="d-inline-flex fa-chrome footer__browser-icon" [icon]="faChrome"></fa-icon>
+            </dd>
+            <dd class="d-inline-flex pr-4 pb-4">
+              <fa-icon class="d-inline-flex fa-safari footer__browser-icon" [icon]="faSafari"></fa-icon>
+            </dd>
+            <dd class="d-inline-flex pr-4 pb-4">
+              <fa-icon class="d-inline-flex fa-android footer__browser-icon" [icon]="faAndroid"></fa-icon>
+            </dd>
+            <dd class="d-inline-flex pr-4 pb-4">
+              <fa-icon class="d-inline-flex fa-apple footer__browser-icon" [icon]="faApple"></fa-icon>
+            </dd>
+            <dd class="d-inline-flex pr-4 pb-4">
+              <fa-icon class="d-inline-flex fa-linux footer__browser-icon" [icon]="faLinux"></fa-icon>
+            </dd>
           </dl>
         </div>
         <div class="col-sm-4">
