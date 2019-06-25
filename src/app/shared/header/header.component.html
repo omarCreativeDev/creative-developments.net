@@ -4,23 +4,20 @@
       <div class="col-sm-12 col-md-8">
         <a
           href="skype:omar.creativedevelopments.net?call"
-          title="Skype: omar.creativedevelopments.net"
           target="_blank"
-          class="header__social-link pr-4 d-inline-flex align-items-center no-underline"
+          class="header__social-link pr-5 d-inline-flex align-items-center no-underline"
         >
           <fa-icon class="pr-3 skype-color header__social-icon" [icon]="faSkype"></fa-icon>Skype
         </a>
         <a
           href="https://www.linkedin.com/in/omarcreativedev"
-          title="LinkedIn: Omar Mirza"
           target="_blank"
-          class="header__social-link pr-4 d-inline-flex align-items-center no-underline"
+          class="header__social-link pr-5 d-inline-flex align-items-center no-underline"
         >
           <fa-icon class="pr-3 linked-in-color header__social-icon" [icon]="faLinkedinIn"></fa-icon>LinkedIn
         </a>
         <a
           href="https://twitter.com/OmarCreativeDev"
-          title="Twitter: OmarCreativeDev"
           target="_blank"
           class="header__social-link d-inline-flex align-items-center no-underline"
         >
@@ -28,7 +25,7 @@
         </a>
       </div>
       <div class="col-md-4 text-right d-none d-md-block">
-        <a href="#" class="header__social-link pr-4 d-inline-flex align-items-center no-underline" (click)="print()">
+        <a href="#" class="header__social-link pr-5 d-inline-flex align-items-center no-underline" (click)="print()">
           <fa-icon class="pr-3 header__social-icon" [icon]="faPrint"></fa-icon>Print page
         </a>
         <a class="header__social-link d-inline-flex align-items-center no-underline" [routerLink]="['/sitemap']">
@@ -46,26 +43,60 @@
         <nav class="col-lg-7 text-lg-right">
           <ul class="m-0 px-0 pb-5 pb-lg-0">
             <li class="d-inline-flex">
-              <a class="header__nav-link no-underline" [routerLink]="['/']" title="Home">HOME</a>
+              <a
+                class="header__nav-link no-underline"
+                [routerLink]="['/']"
+                [routerLinkActive]="'header__nav-link--active'"
+                >HOME</a
+              >
             </li>
             <li class="d-inline-flex">
-              <a class="header__nav-link no-underline" [routerLink]="['/about-me']" title="About Me">ABOUT</a>
+              <a
+                class="header__nav-link no-underline"
+                [routerLink]="['/about-me']"
+                [routerLinkActive]="'header__nav-link--active'"
+                >ABOUT</a
+              >
             </li>
             <li class="d-inline-flex">
-              <a class="header__nav-link no-underline" [routerLink]="['/portfolio/']" title="Portfolio">PORTFOLIO</a>
+              <a
+                class="header__nav-link no-underline"
+                [routerLink]="['/portfolio/']"
+                [routerLinkActive]="'header__nav-link--active'"
+                >PORTFOLIO</a
+              >
             </li>
             <li class="d-inline-flex">
-              <a class="header__nav-link no-underline" [routerLink]="['/hire-me']" title="Hire Me">HIRE ME</a>
+              <a
+                class="header__nav-link no-underline"
+                [routerLink]="['/hire-me']"
+                [routerLinkActive]="'header__nav-link--active'"
+                >HIRE ME</a
+              >
             </li>
             <li class="d-inline-flex">
-              <a class="header__nav-link no-underline" [routerLink]="['/services/']" title="Services">SERVICES</a>
+              <a
+                class="header__nav-link no-underline"
+                [routerLink]="['/services/']"
+                [routerLinkActive]="'header__nav-link--active'"
+                >SERVICES</a
+              >
             </li>
             <li class="d-inline-flex">
-              <a class="header__nav-link no-underline" [routerLink]="['/my-skills']" title="My SKills">SKILLS</a>
+              <a
+                class="header__nav-link no-underline"
+                [routerLink]="['/my-skills']"
+                [routerLinkActive]="'header__nav-link--active'"
+                >SKILLS</a
+              >
             </li>
             <li class="d-inline-flex">
-              <a class="header__nav-link no-underline pr-lg-0" [routerLink]="['/contact-me']" title="Contact Me"
-                >CONTACT</a
+              <a
+                class="header__nav-link no-underline pr-lg-0"
+                [routerLink]="['/contact-me']"
+                [routerLinkActive]="'header__nav-link--active'"
+              >
+                CONTACT</a
               >
             </li>
           </ul>

@@ -2,7 +2,7 @@
 @import '~src/styles/mixins';
 
 .footer__nav-bg {
-  padding: 6.0rem 0;
+  padding: 6rem 0;
   @include bannerBg();
 }
 .footer__nav-list,
@@ -20,4 +20,8 @@
   font-size: 1.8rem;
   @include trajanProFont();
   color: $secondary-color;
+}
+
+.footer__browser-icon {
+  font-size: 4.8rem;
 }

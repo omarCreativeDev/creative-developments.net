@@ -17,14 +17,33 @@
         <div class="col-sm-4">
           <dl class="footer__nav-list">
             <dt class="footer__nav-title pb-5">Cross <span class="text-white">browser</span> support</dt>
-            <dd><i class="fa fa-internet-explorer darkBlue large"></i></dd>
-            <dd><i class="fa fa-opera red large"></i></dd>
-            <dd><i class="fa fa-firefox orange large"></i></dd>
-            <dd><i class="fa fa-chrome yellow large"></i></dd>
-            <dd><i class="fa fa-safari lightBlue large"></i></dd>
-            <dd><i class="fa fa-android green large"></i></dd>
-            <dd><i class="fa fa-apple grey large"></i></dd>
-            <dd><i class="fa fa-linux white large"></i></dd>
+            <dd class="d-inline-flex pr-4 pb-4">
+              <fa-icon
+                class="d-inline-flex fa-internet-explorer footer__browser-icon"
+                [icon]="faInternetExplorer"
+              ></fa-icon>
+            </dd>
+            <dd class="d-inline-flex pr-4 pb-4">
+              <fa-icon class="d-inline-flex fa-opera footer__browser-icon" [icon]="faOpera"></fa-icon>
+            </dd>
+            <dd class="d-inline-flex pr-4 pb-4">
+              <fa-icon class="d-inline-flex fa-firefox footer__browser-icon" [icon]="faFirefox"></fa-icon>
+            </dd>
+            <dd class="d-inline-flex pr-4 pb-4">
+              <fa-icon class="d-inline-flex fa-chrome footer__browser-icon" [icon]="faChrome"></fa-icon>
+            </dd>
+            <dd class="d-inline-flex pr-4 pb-4">
+              <fa-icon class="d-inline-flex fa-safari footer__browser-icon" [icon]="faSafari"></fa-icon>
+            </dd>
+            <dd class="d-inline-flex pr-4 pb-4">
+              <fa-icon class="d-inline-flex fa-android footer__browser-icon" [icon]="faAndroid"></fa-icon>
+            </dd>
+            <dd class="d-inline-flex pr-4 pb-4">
+              <fa-icon class="d-inline-flex fa-apple footer__browser-icon" [icon]="faApple"></fa-icon>
+            </dd>
+            <dd class="d-inline-flex pr-4 pb-4">
+              <fa-icon class="d-inline-flex fa-linux footer__browser-icon" [icon]="faLinux"></fa-icon>
+            </dd>
           </dl>
         </div>
         <div class="col-sm-4">
@@ -41,25 +60,25 @@
           </dl>
         </div>
         <div class="col-sm-4">
-          <dl class="footer__nav-list">
-            <dt class="footer__nav-title pb-5">Favourite <span class="text-white">Links</span></dt>
-            <dd><a class="footer__nav-link" rel="nofollow" href="https://angular.io/">https://angular.io/</a></dd>
-            <dd><a class="footer__nav-link" rel="nofollow" href="https://rxjs.dev/">https://rxjs.dev/</a></dd>
-            <dd>
+          <dl class="footer__nav-list row">
+            <dt class="footer__nav-title pb-5 col-12">Favourite <span class="text-white">Links</span></dt>
+            <dd class="col-6"><a class="footer__nav-link" rel="nofollow" href="https://angular.io/">Angular</a></dd>
+            <dd class="col-6"><a class="footer__nav-link" rel="nofollow" href="https://rxjs.dev/">RxJs</a></dd>
+            <dd class="col-6">
               <a class="footer__nav-link" rel="nofollow" href="https://material.angular.io/">
-                https://material.angular.io/
+                material
               </a>
             </dd>
-            <dd>
+            <dd class="col-6">
               <a class="footer__nav-link" rel="nofollow" href="https://ngxs.gitbook.io/ngxs/">
-                https://ngxs.gitbook.io/ngxs/
+                NGXS
               </a>
             </dd>
-            <dd>
-              <a class="footer__nav-link" rel="nofollow" href="https://nodejs.org/en/">https://nodejs.org/en/</a>
+            <dd class="col-6">
+              <a class="footer__nav-link" rel="nofollow" href="https://nodejs.org/en/">Node</a>
             </dd>
-            <dd>
-              <a class="footer__nav-link" rel="nofollow" href="http://stackoverflow.com/">http://stackoverflow.com/</a>
+            <dd class="col-6">
+              <a class="footer__nav-link" rel="nofollow" href="http://stackoverflow.com/">Stack overflow</a>
             </dd>
           </dl>
         </div>
@@ -84,35 +103,42 @@
           <dl class="footer__nav-list">
             <dt class="footer__nav-title pb-5">Code <span class="text-white">samples</span></dt>
             <dd>
-              <a rel="nofollow" href="http://validator.w3.org/check?uri=referer" target="_blank"
-                class="validHtml5 footer__nav-link">
-              <i class="fa fa-html5 orange large"></i>
-            </a></dd>
+              <a
+                rel="nofollow"
+                href="http://validator.w3.org/check?uri=referer"
+                target="_blank"
+                class="validHtml5 footer__nav-link"
+              >
+                <i class="fa fa-html5 orange large"></i>
+              </a>
+            </dd>
             <dd>
-              <a rel="nofollow" href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" target="_blank"
-              class="validCss3 footer__nav-link">
-              <i class="fa fa-css3 lightBlue large"></i>
-            </a></dd>
+              <a
+                rel="nofollow"
+                href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3"
+                target="_blank"
+                class="validCss3 footer__nav-link"
+              >
+                <i class="fa fa-css3 lightBlue large"></i>
+              </a>
+            </dd>
           </dl>
         </div>
         <div class="col-sm-4">
           <dl class="footer__nav-list">
             <dt class="footer__nav-title pb-5">Connect <span class="text-white">With</span> Me</dt>
             <dd>
-              <a href="skype:omar.creativedevelopments.net?call" title="Skype: omar.creativedevelopments.net"
-                target="_blank" class="footer__nav-link">
+              <a href="skype:omar.creativedevelopments.net?call" target="_blank" class="footer__nav-link">
                 <i class="fa fa-skype lightBlue large"></i>
               </a>
             </dd>
             <dd>
-              <a href="https://www.linkedin.com/in/omarcreativedev" title="LinkedIn: Omar Mirza" target="_blank"
-                class="footer__nav-link">
+              <a href="https://www.linkedin.com/in/omarcreativedev" class="footer__nav-link">
                 <i class="fa fa-linkedin darkBlue large"></i>
               </a>
             </dd>
             <dd>
-              <a href="https://twitter.com/OmarCreativeDev" title="Twitter: OmarCreativeDev" target="_blank"
-                class="footer__nav-link">
+              <a href="https://twitter.com/OmarCreativeDev" class="footer__nav-link">
                 <i class="fa fa-twitter lightBlue large"></i>
               </a>
             </dd>
