@@ -26,3 +26,9 @@
   font-size: 4.8rem;
   min-width: 4.8rem;
 }
+
+.footer__logo {
+  @include trajanProFont();
+  color: $tertiary-color;
+  font-size: 1.6rem;
+}
