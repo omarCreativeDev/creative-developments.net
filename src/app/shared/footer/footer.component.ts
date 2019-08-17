@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faCode, faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faArrowUp, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import {
   faInternetExplorer,
@@ -38,6 +38,8 @@ export class FooterComponent {
   public faTwitter: IconDefinition = faTwitter;
   public faGithub: IconDefinition = faGithub;
   public faBitbucket: IconDefinition = faBitbucket;
+  public faEnvelope: IconDefinition = faEnvelope;
+  public faPhone: IconDefinition = faPhone;
 
   public currentYear(): number {
     return new Date().getFullYear();
