@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { faCode, faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faArrowUp, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import {
   faInternetExplorer,
-  faGooglePlusG,
   faLinkedinIn,
   faSkype,
   faTwitter,
@@ -14,6 +13,8 @@ import {
   faAndroid,
   faApple,
   faLinux,
+  faGithub,
+  faBitbucket,
 } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
@@ -28,14 +29,17 @@ export class FooterComponent {
   public faChrome: IconDefinition = faChrome;
   public faCode: IconDefinition = faCode;
   public faFirefox: IconDefinition = faFirefox;
-  public faGooglePlusG: IconDefinition = faGooglePlusG;
   public faInternetExplorer: IconDefinition = faInternetExplorer;
   public faLinkedinIn: IconDefinition = faLinkedinIn;
   public faLinux: IconDefinition = faLinux;
   public faOpera: IconDefinition = faOpera;
   public faSafari: IconDefinition = faSafari;
   public faSkype: IconDefinition = faSkype;
-  public faTwitter: any = faTwitter;
+  public faTwitter: IconDefinition = faTwitter;
+  public faGithub: IconDefinition = faGithub;
+  public faBitbucket: IconDefinition = faBitbucket;
+  public faEnvelope: IconDefinition = faEnvelope;
+  public faPhone: IconDefinition = faPhone;
 
   public currentYear(): number {
     return new Date().getFullYear();

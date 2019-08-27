@@ -1,34 +1,41 @@
-<header>
+<header id="back-to-top">
   <div class="container py-4">
     <div class="row">
       <div class="col-sm-12 col-md-8">
         <a
           href="skype:omar.creativedevelopments.net?call"
           target="_blank"
-          class="header__social-link pr-5 d-inline-flex align-items-center no-underline"
+          class="header__social-link text-body pr-5 d-inline-flex align-items-center no-underline"
         >
           <fa-icon class="pr-3 skype-color header__social-icon" [icon]="faSkype"></fa-icon>Skype
         </a>
         <a
           href="https://www.linkedin.com/in/omarcreativedev"
           target="_blank"
-          class="header__social-link pr-5 d-inline-flex align-items-center no-underline"
+          class="header__social-link text-body pr-5 d-inline-flex align-items-center no-underline"
         >
           <fa-icon class="pr-3 linked-in-color header__social-icon" [icon]="faLinkedinIn"></fa-icon>LinkedIn
         </a>
         <a
           href="https://twitter.com/OmarCreativeDev"
           target="_blank"
-          class="header__social-link d-inline-flex align-items-center no-underline"
+          class="header__social-link text-body d-inline-flex align-items-center no-underline"
         >
           <fa-icon class="pr-3 twitter-color header__social-icon" [icon]="faTwitter"></fa-icon>Twitter
         </a>
       </div>
       <div class="col-md-4 text-right d-none d-md-block">
-        <a href="#" class="header__social-link pr-5 d-inline-flex align-items-center no-underline" (click)="print()">
+        <a
+          href="#"
+          class="header__social-link text-body pr-5 d-inline-flex align-items-center no-underline"
+          (click)="print()"
+        >
           <fa-icon class="pr-3 header__social-icon" [icon]="faPrint"></fa-icon>Print page
         </a>
-        <a class="header__social-link d-inline-flex align-items-center no-underline" [routerLink]="['/sitemap']">
+        <a
+          class="header__social-link text-body d-inline-flex align-items-center no-underline"
+          [routerLink]="['/sitemap']"
+        >
           <fa-icon class="pr-3 header__social-icon" [icon]="faSitemap"></fa-icon>Sitemap
         </a>
       </div>

@@ -1,12 +1,14 @@
 @import 'colors';
 
-$font-family-base: 'lucida-sans', lucida-sans, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-family-palatino: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 $font-family-trajan: 'trajan-pro', trajan-pro, 'lucida-sans', lucida-sans, 'Lucida Grande', Garuda, sans-serif;
-$font-size-base: 1.4rem;
 $primary-color: $mine-shaft;
 $secondary-color: $conifer;
 $tertiary-color: $christi;
 
 // bootstrap overrides
-$link-color: $secondary-color;
+$font-family-base: 'lucida-sans', lucida-sans, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-size-base: 1.4rem;
+$body-color: $primary-color;
+$link-color: $tertiary-color;
+$link-hover-color: $tertiary-color;

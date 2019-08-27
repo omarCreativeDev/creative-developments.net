@@ -6,8 +6,9 @@
         Developing &amp; freelancing
       </div>
       <div class="col-sm-6 col-md-6 text-right">
-        Back to Top
-        <fa-icon class="pl-2" [icon]="faArrowUp"></fa-icon>
+        <a class="no-underline" routerLink="." fragment="back-to-top"
+          >Back to Top<fa-icon class="pl-3 text-body" [icon]="faArrowUp"></fa-icon
+        ></a>
       </div>
     </div>
   </div>
@@ -19,30 +20,42 @@
             <dt class="footer__nav-title pb-5">Cross <span class="text-white">browser</span> support</dt>
             <dd class="d-inline-flex pr-4 pb-4">
               <fa-icon
-                class="d-inline-flex fa-internet-explorer footer__browser-icon"
+                class="d-inline-flex justify-content-center internet-explorer-color footer__icon"
                 [icon]="faInternetExplorer"
               ></fa-icon>
             </dd>
             <dd class="d-inline-flex pr-4 pb-4">
-              <fa-icon class="d-inline-flex fa-opera footer__browser-icon" [icon]="faOpera"></fa-icon>
+              <fa-icon class="d-inline-flex justify-content-center opera-color footer__icon" [icon]="faOpera"></fa-icon>
             </dd>
             <dd class="d-inline-flex pr-4 pb-4">
-              <fa-icon class="d-inline-flex fa-firefox footer__browser-icon" [icon]="faFirefox"></fa-icon>
+              <fa-icon
+                class="d-inline-flex justify-content-center firefox-color footer__icon"
+                [icon]="faFirefox"
+              ></fa-icon>
             </dd>
             <dd class="d-inline-flex pr-4 pb-4">
-              <fa-icon class="d-inline-flex fa-chrome footer__browser-icon" [icon]="faChrome"></fa-icon>
+              <fa-icon
+                class="d-inline-flex justify-content-center chrome-color footer__icon"
+                [icon]="faChrome"
+              ></fa-icon>
             </dd>
             <dd class="d-inline-flex pr-4 pb-4">
-              <fa-icon class="d-inline-flex fa-safari footer__browser-icon" [icon]="faSafari"></fa-icon>
+              <fa-icon
+                class="d-inline-flex justify-content-center safari-color footer__icon"
+                [icon]="faSafari"
+              ></fa-icon>
             </dd>
             <dd class="d-inline-flex pr-4 pb-4">
-              <fa-icon class="d-inline-flex fa-android footer__browser-icon" [icon]="faAndroid"></fa-icon>
+              <fa-icon
+                class="d-inline-flex justify-content-center android-color footer__icon"
+                [icon]="faAndroid"
+              ></fa-icon>
             </dd>
             <dd class="d-inline-flex pr-4 pb-4">
-              <fa-icon class="d-inline-flex fa-apple footer__browser-icon" [icon]="faApple"></fa-icon>
+              <fa-icon class="d-inline-flex justify-content-center apple-color footer__icon" [icon]="faApple"></fa-icon>
             </dd>
             <dd class="d-inline-flex pr-4 pb-4">
-              <fa-icon class="d-inline-flex fa-linux footer__browser-icon" [icon]="faLinux"></fa-icon>
+              <fa-icon class="d-inline-flex justify-content-center footer__icon" [icon]="faLinux"></fa-icon>
             </dd>
           </dl>
         </div>
@@ -62,39 +75,45 @@
         <div class="col-sm-4">
           <dl class="footer__nav-list row">
             <dt class="footer__nav-title pb-5 col-12">Favourite <span class="text-white">Links</span></dt>
-            <dd class="col-6"><a class="footer__nav-link" rel="nofollow" href="https://angular.io/">Angular</a></dd>
-            <dd class="col-6"><a class="footer__nav-link" rel="nofollow" href="https://rxjs.dev/">RxJs</a></dd>
             <dd class="col-6">
-              <a class="footer__nav-link" rel="nofollow" href="https://material.angular.io/">
-                material
+              <a class="footer__nav-link" rel="nofollow" href="https://angular.io/" target="_blank">Angular</a>
+            </dd>
+            <dd class="col-6">
+              <a class="footer__nav-link" rel="nofollow" href="https://rxjs.dev/" target="_blank">RxJs</a>
+            </dd>
+            <dd class="col-6">
+              <a class="footer__nav-link" rel="nofollow" target="_blank" href="https://material.angular.io/">
+                Material
               </a>
             </dd>
             <dd class="col-6">
-              <a class="footer__nav-link" rel="nofollow" href="https://ngxs.gitbook.io/ngxs/">
+              <a class="footer__nav-link" rel="nofollow" target="_blank" href="https://ngxs.gitbook.io/ngxs/">
                 NGXS
               </a>
             </dd>
             <dd class="col-6">
-              <a class="footer__nav-link" rel="nofollow" href="https://nodejs.org/en/">Node</a>
+              <a class="footer__nav-link" rel="nofollow" target="_blank" href="https://nodejs.org/en/">Node</a>
             </dd>
             <dd class="col-6">
-              <a class="footer__nav-link" rel="nofollow" href="http://stackoverflow.com/">Stack overflow</a>
+              <a class="footer__nav-link" rel="nofollow" target="_blank" href="http://stackoverflow.com/"
+                >Stack overflow</a
+              >
             </dd>
           </dl>
         </div>
       </div>
-      <div class="row">
+      <div class="row align-items-end">
         <div class="col-sm-4">
           <dl class="footer__nav-list">
             <dt class="footer__nav-title pb-5">Contact <span class="text-white">Info</span></dt>
             <dd>
-              <i class="fa fa-phone small"></i>
-              <a class="footer__nav-link" href="tel:07932 566 488">07932 566 488</a>
+              <a class="footer__nav-link" href="tel:07932 566 488">
+                <fa-icon class="pr-3" [flip]="'horizontal'" [icon]="faPhone"></fa-icon>07932 566 488
+              </a>
             </dd>
             <dd>
-              <i class="fa fa-envelope-o small"></i>
               <a class="footer__nav-link" href="mailto:omar.creative.dev@gmail.com?subject=Creative%20Developments">
-                omar.creative.dev@gmail.com
+                <fa-icon class="pr-3" [icon]="faEnvelope"></fa-icon>omar.creative.dev@gmail.com
               </a>
             </dd>
           </dl>
@@ -102,24 +121,20 @@
         <div class="col-sm-4">
           <dl class="footer__nav-list">
             <dt class="footer__nav-title pb-5">Code <span class="text-white">samples</span></dt>
-            <dd>
-              <a
-                rel="nofollow"
-                href="http://validator.w3.org/check?uri=referer"
-                target="_blank"
-                class="validHtml5 footer__nav-link"
-              >
-                <i class="fa fa-html5 orange large"></i>
+            <dd class="d-inline-flex pr-4">
+              <a href="https://github.com/omarCreativeDev" target="_blank" class="d-inline-flex footer__nav-link">
+                <fa-icon
+                  class="d-inline-flex justify-content-center fa-github footer__icon"
+                  [icon]="faGithub"
+                ></fa-icon>
               </a>
             </dd>
-            <dd>
-              <a
-                rel="nofollow"
-                href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3"
-                target="_blank"
-                class="validCss3 footer__nav-link"
-              >
-                <i class="fa fa-css3 lightBlue large"></i>
+            <dd class="d-inline-flex pr-4">
+              <a href="https://bitbucket.org/omarCreativeDev" target="_blank" class="d-inline-flex footer__nav-link">
+                <fa-icon
+                  class="d-inline-flex justify-content-center bitbucket-color footer__icon"
+                  [icon]="faBitbucket"
+                ></fa-icon>
               </a>
             </dd>
           </dl>
@@ -127,19 +142,23 @@
         <div class="col-sm-4">
           <dl class="footer__nav-list">
             <dt class="footer__nav-title pb-5">Connect <span class="text-white">With</span> Me</dt>
-            <dd>
-              <a href="skype:omar.creativedevelopments.net?call" target="_blank" class="footer__nav-link">
-                <i class="fa fa-skype lightBlue large"></i>
+            <dd class="d-inline-flex pr-4">
+              <a href="skype:omar.creativedevelopments.net?call" target="_blank" class="d-inline-flex footer__nav-link">
+                <fa-icon class="d-inline-flex skype-color footer__icon" [icon]="faSkype"></fa-icon>
               </a>
             </dd>
-            <dd>
-              <a href="https://www.linkedin.com/in/omarcreativedev" class="footer__nav-link">
-                <i class="fa fa-linkedin darkBlue large"></i>
+            <dd class="d-inline-flex pr-4">
+              <a
+                href="https://www.linkedin.com/in/omarcreativedev"
+                target="_blank"
+                class="d-inline-flex footer__nav-link"
+              >
+                <fa-icon class="d-inline-flex linked-in-color footer__icon" [icon]="faLinkedinIn"></fa-icon>
               </a>
             </dd>
-            <dd>
-              <a href="https://twitter.com/OmarCreativeDev" class="footer__nav-link">
-                <i class="fa fa-twitter lightBlue large"></i>
+            <dd class="d-inline-flex pr-4">
+              <a href="https://twitter.com/OmarCreativeDev" target="_blank" class="d-inline-flex footer__nav-link">
+                <fa-icon class="d-inline-flex twitter-color footer__icon" [icon]="faTwitter"></fa-icon>
               </a>
             </dd>
           </dl>
@@ -153,7 +172,7 @@
         &copy; Copyright {{ currentYear() }} Creative Developments.net. All rights reserved.
       </div>
       <div class="col-sm-6 col-md-6 text-right">
-        <a href="/">Creative <span>Developments</span>.net</a>
+        <a class="footer__logo no-underline" href="/">Creative <span class="text-body">Developments</span>.net</a>
       </div>
     </div>
   </div>
