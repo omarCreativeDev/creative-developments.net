@@ -40,8 +40,4 @@ export class FooterComponent {
   public faBitbucket: IconDefinition = faBitbucket;
   public faEnvelope: IconDefinition = faEnvelope;
   public faPhone: IconDefinition = faPhone;
-
-  public currentYear(): number {
-    return new Date().getFullYear();
-  }
 }
