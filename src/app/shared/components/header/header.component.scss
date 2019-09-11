@@ -2,11 +2,7 @@
 @import '~src/styles/mixins';
 
 .header__social-link {
-  font-size: 1.2rem;
-
-  &:hover {
-    color: $tertiary-color;
-  }
+  font-size: 1.4rem;
 }
 .header__social-icon {
   font-size: 1.6rem;
@@ -14,7 +10,7 @@
 .header__logo {
   font-family: $font-family-trajan;
   color: $secondary-color;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
 
