@@ -1,20 +1,17 @@
 import { Component } from '@angular/core';
-import { faCode, faArrowUp, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUp, faCode, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import {
-  faInternetExplorer,
-  faLinkedinIn,
-  faSkype,
-  faTwitter,
-  faOpera,
+  faBitbucket,
   faChrome,
   faFirefox,
-  faSafari,
-  faAndroid,
-  faApple,
-  faLinux,
   faGithub,
-  faBitbucket,
+  faInternetExplorer,
+  faLinkedinIn,
+  faOpera,
+  faSafari,
+  faSkype,
+  faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
@@ -23,21 +20,18 @@ import {
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
-  public faAndroid: IconDefinition = faAndroid;
-  public faApple: IconDefinition = faApple;
   public faArrowUp: IconDefinition = faArrowUp;
+  public faBitbucket: IconDefinition = faBitbucket;
   public faChrome: IconDefinition = faChrome;
   public faCode: IconDefinition = faCode;
+  public faEnvelope: IconDefinition = faEnvelope;
   public faFirefox: IconDefinition = faFirefox;
+  public faGithub: IconDefinition = faGithub;
   public faInternetExplorer: IconDefinition = faInternetExplorer;
   public faLinkedinIn: IconDefinition = faLinkedinIn;
-  public faLinux: IconDefinition = faLinux;
   public faOpera: IconDefinition = faOpera;
+  public faPhone: IconDefinition = faPhone;
   public faSafari: IconDefinition = faSafari;
   public faSkype: IconDefinition = faSkype;
   public faTwitter: IconDefinition = faTwitter;
-  public faGithub: IconDefinition = faGithub;
-  public faBitbucket: IconDefinition = faBitbucket;
-  public faEnvelope: IconDefinition = faEnvelope;
-  public faPhone: IconDefinition = faPhone;
 }
