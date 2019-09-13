@@ -6,12 +6,14 @@ node_js:
   - '10'
 
 addons:
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
-      - sshpass
+  chrome: stable
+#addons:
+#  apt:
+#    sources:
+#      - google-chrome
+#    packages:
+#      - google-chrome-stable
+#      - sshpass
 
 cache:
   directories:
