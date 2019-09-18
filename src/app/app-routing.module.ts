@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule),
   },
   {
+    path: 'portfolio',
+    loadChildren: () => import('./features/portfolio/portfolio.module').then(m => m.PortfolioModule),
+  },
+  {
     path: 'about-me',
     loadChildren: () => import('./features/about-me/about-me.module').then(m => m.AboutMeModule),
   },

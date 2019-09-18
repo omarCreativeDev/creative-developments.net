@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SharedModule } from '../../shared/shared.module';
 import { AboutMeRoutingModule } from './about-me-routing.module';
 import { AboutMePageComponent } from './about-me-page/about-me-page.component';
+import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
   declarations: [AboutMePageComponent],
