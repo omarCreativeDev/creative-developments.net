@@ -18,6 +18,10 @@ const routes: Routes = [
     path: 'portfolio',
     loadChildren: () => import('./features/portfolio/portfolio.module').then(m => m.PortfolioModule),
   },
+  {
+    path: 'contact-me',
+    loadChildren: () => import('./features/contact-me/contact-me.module').then(m => m.ContactMeModule),
+  },
 ];
 
 @NgModule({
