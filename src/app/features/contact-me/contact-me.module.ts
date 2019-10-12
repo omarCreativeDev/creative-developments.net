@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContactMeRoutingModule } from './contact-me-routing.module';
-import { ContactMePageComponent } from './contact-me-page/contact-me-page.component';
+import { ContactMePageComponent } from './pages/contact-me-page/contact-me-page.component';
 import { SharedModule } from '@shared/shared.module';
 
 @NgModule({

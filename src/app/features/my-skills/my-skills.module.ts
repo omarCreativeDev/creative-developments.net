@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MySkillsRoutingModule } from './my-skills-routing.module';
-import { MySkillsPageComponent } from './my-skills-page/my-skills-page.component';
+import { MySkillsPageComponent } from './pages/my-skills-page/my-skills-page.component';
 import { SharedModule } from '@shared/shared.module';
 
 @NgModule({

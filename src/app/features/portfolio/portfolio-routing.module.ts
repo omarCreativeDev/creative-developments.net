@@ -1,6 +1,6 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { PortfolioPageComponent } from '@features/portfolio/portfolio-page/portfolio-page.component';
+import { PortfolioPageComponent } from '@features/portfolio/pages/portfolio-page/portfolio-page.component';
 
 const routes: Routes = [{ path: '', component: PortfolioPageComponent }];
 
