@@ -1,0 +1,23 @@
+@import '~src/styles/colors';
+@import '~src/styles/variables';
+
+.featured-work__bg {
+  background: url('~src/assets/images/featured-work-bg.gif') 0 center repeat-x;
+  margin: 10rem 0;
+}
+
+.featured-work__client-link,
+.featured-work__client-img {
+  height: auto;
+  width: 100%;
+}
+
+.featured-work__client-img {
+  border-radius: 50%;
+  border: solid 0.5rem $white;
+  box-shadow: 0.1rem 0.1rem 0.6rem $gray;
+
+  &:hover {
+    border-color: $secondary-color;
+  }
+}

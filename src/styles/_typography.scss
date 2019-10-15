@@ -43,15 +43,6 @@ a:visited,
   font-style: italic;
 }
 
-h1, h2 {
-  font-size: 2.4rem;
-  margin-bottom: 3.0rem;
-}
-
-h3 {
-  font-size: 2.0rem;
-}
-
 h1,
 h2,
 h3,
@@ -59,6 +50,9 @@ h4,
 h5,
 h6 {
   @include palatinoFont();
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  margin-bottom: 3.0rem;
 }
 
 .error-color {
@@ -75,7 +69,7 @@ h6 {
 .opera-color { color: $radical-red; }
 .firefox-color { color: $cinnabar; }
 .chrome-color { color: $gold; }
-.android-color { color: $conifer; }
+.android-color { color: $secondary-color; }
 .apple-color { color: $iron; }
 
 .text-tertiary { color: $tertiary-color; }
