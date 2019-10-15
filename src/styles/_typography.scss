@@ -60,15 +60,22 @@ h6 {
 }
 .skype-color,
 .twitter-color,
-.safari-color { color: $picton-blue; }
+.safari-color,
+.css3-color { color: $picton-blue; }
 
 .internet-explorer-color,
 .linked-in-color { color: $boston-blue; }
 
 .bitbucket-color { color: $blue-ribbon; }
-.opera-color { color: $radical-red; }
+
+.opera-color,
+.html5-color { color: $radical-red; }
+
 .firefox-color { color: $cinnabar; }
-.chrome-color { color: $gold; }
+
+.chrome-color,
+.js-color { color: $gold; }
+
 .android-color { color: $secondary-color; }
 .apple-color { color: $iron; }
 
