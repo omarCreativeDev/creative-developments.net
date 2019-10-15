@@ -1,9 +1,13 @@
 @import '~src/styles/colors';
 @import '~src/styles/variables';
 
-.featured-work__bg {
-  background: url('~src/assets/images/featured-work-bg.gif') 0 center repeat-x;
+.featured-work {
   margin: 10rem 0;
+}
+
+.featured-work__bg {
+  background: url('~src/assets/images/featured-work-bg-top.gif') top repeat-x,
+    url('~src/assets/images/featured-work-bg-bottom.gif') bottom repeat-x, $tahuna-sands;
 }
 
 .featured-work__client-link,
