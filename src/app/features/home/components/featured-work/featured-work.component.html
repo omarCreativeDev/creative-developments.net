@@ -10,45 +10,17 @@
   <div class="featured-work__bg">
     <article class="container">
       <div class="row d-flex justify-content-center">
-        <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+        <div *ngFor="let i of featuredWork" class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
           <a
-            data-fancybox="gallery"
-            data-caption="Featured Work | Interoute | Pricing"
-            href="/assets/images/portfolio/interoute-pricing.jpg"
+            [attr.data-fancybox]="'gallery'"
+            [attr.data-caption]="i.caption"
+            href="/assets/images/portfolio/{{ i.imageName }}.jpg"
             class="featured-work__client-link mb-5 mb-md-0"
           >
             <img
-              src="/assets/images/portfolio/interoute-pricing-featured-thumb.jpg"
+              src="/assets/images/portfolio/{{ i.imageName }}-featured-thumb.jpg"
               class="featured-work__client-img"
-              alt="Featured Work | Interoute | Pricing"
-            />
-          </a>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
-          <a
-            data-fancybox="gallery"
-            data-caption="Featured Work | Interoute | Basket"
-            href="/assets/images/portfolio/interoute-basket.jpg"
-            class="featured-work__client-link mb-5 mb-md-0"
-          >
-            <img
-              src="/assets/images/portfolio/interoute-basket-featured-thumb.jpg"
-              class="featured-work__client-img"
-              alt="Featured Work | Interoute | Basket"
-            />
-          </a>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
-          <a
-            data-fancybox="gallery"
-            data-caption="Featured Work | Interoute | Quick Deployment"
-            href="/assets/images/portfolio/interoute-quick-deployment.jpg"
-            class="featured-work__client-link mb-5 mb-md-0"
-          >
-            <img
-              src="/assets/images/portfolio/interoute-quick-deployment-featured-thumb.jpg"
-              class="featured-work__client-img"
-              alt="Featured Work | Interoute | Quick Deployment"
+              alt="{{ i.caption }}"
             />
           </a>
         </div>
