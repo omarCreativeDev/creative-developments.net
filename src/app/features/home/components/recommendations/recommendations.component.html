@@ -4,4 +4,21 @@
       <h5 class="text-center">Recommendations</h5>
     </div>
   </div>
+  <div class="row">
+    <div *ngFor="let i of recommendations" class="col-6">
+      <div class="d-flex">
+        <img class="recommendations__image" src="/assets/images/recommendations/{{ i.image }}.jpeg" />
+        <div class="pl-5 pb-5">
+          <div>
+            <b>{{ i.name }}</b>
+          </div>
+          <div>{{ i.role }}</div>
+          <div>
+            <i>{{ i.date }}</i>
+          </div>
+        </div>
+      </div>
+      <p><fa-icon [icon]="faQuoteLeft"></fa-icon> {{ i.feedback }} <fa-icon [icon]="faQuoteRight"></fa-icon></p>
+    </div>
+  </div>
 </div>
