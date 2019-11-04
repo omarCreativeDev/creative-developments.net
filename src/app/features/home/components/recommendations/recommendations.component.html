@@ -5,20 +5,28 @@
     </div>
   </div>
   <div class="row">
-    <div *ngFor="let i of recommendations" class="col-6">
-      <div class="d-flex">
-        <img class="recommendations__image" src="/assets/images/recommendations/{{ i.image }}.jpeg" />
-        <div class="pl-5 pb-5">
-          <div>
-            <b>{{ i.name }}</b>
-          </div>
-          <div>{{ i.role }}</div>
-          <div>
-            <i>{{ i.date }}</i>
-          </div>
+    <div class="col-12">
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li *ngFor="let i of recommendations" class="glide__slide">
+              <div class="d-flex">
+                <img class="recommendations__image" src="/assets/images/recommendations/{{ i.image }}.jpeg" />
+                <div class="pl-5 pb-5">
+                  <div>
+                    <b>{{ i.name }}</b>
+                  </div>
+                  <div>{{ i.role }}</div>
+                  <div>
+                    <i>{{ i.date }}</i>
+                  </div>
+                </div>
+              </div>
+              <p><fa-icon [icon]="faQuoteLeft"></fa-icon> {{ i.feedback }} <fa-icon [icon]="faQuoteRight"></fa-icon></p>
+            </li>
+          </ul>
         </div>
       </div>
-      <p><fa-icon [icon]="faQuoteLeft"></fa-icon> {{ i.feedback }} <fa-icon [icon]="faQuoteRight"></fa-icon></p>
     </div>
   </div>
 </div>

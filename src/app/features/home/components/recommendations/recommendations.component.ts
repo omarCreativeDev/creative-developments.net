@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { IRecommendation } from '@core/model/interfaces';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
+import Glide from '@glidejs/glide';
 
 @Component({
   selector: 'app-recommendations',
   templateUrl: './recommendations.component.html',
   styleUrls: ['./recommendations.component.scss'],
 })
-export class RecommendationsComponent {
+export class RecommendationsComponent implements AfterViewInit {
   public faQuoteLeft: IconDefinition = faQuoteLeft;
   public faQuoteRight: IconDefinition = faQuoteRight;
   public recommendations: IRecommendation[] = [
@@ -22,7 +23,7 @@ export class RecommendationsComponent {
         'Omar again in the future.',
       image: 'richard-tees',
       name: 'Richard Rees',
-      role: 'UX Lead at Skills for Care',
+      role: 'UX Lead',
     },
     {
       date: 'September 18, 2019',
@@ -55,7 +56,16 @@ export class RecommendationsComponent {
         'person as a colleague. I would certainly welcome the opportunity to work with Omar again.',
       image: 'andrea-pace',
       name: 'Andrea Pace',
-      role: 'Head of Web Development at Runpath',
+      role: 'Head of Web Development',
     },
   ];
+  public slider;
+
+  ngAfterViewInit(): void {
+    this.slider = new Glide('.glide', {
+      gap: 30,
+      perView: 2,
+      autoplay: 2000,
+    }).mount();
+  }
 }
