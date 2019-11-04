@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RecommendationsComponent } from './recommendations.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('RecommendationsComponent', () => {
   let component: RecommendationsComponent;
@@ -9,6 +10,7 @@ describe('RecommendationsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [RecommendationsComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   }));
 
