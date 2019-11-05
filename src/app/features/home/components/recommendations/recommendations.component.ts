@@ -64,9 +64,7 @@ export class RecommendationsComponent implements AfterViewInit, OnDestroy {
         'Omar has demonstrated to be a great front-end lead and did so both with his genuine interest in ' +
         'finding the right solution to technical challenges, and in his care towards his teammates and the project in ' +
         'general. He has great work ethos and has on many occasions worked from home during non-working hours to ' +
-        'assist the team to overcome blockers. He is a strong communicator and can express ideas and options succinctly ' +
-        'to the team; all the above earned him the trust and respect of the team and I would personally love the ' +
-        'opportunity to work with him again in the future.',
+        'assist the team to overcome blockers.',
       image: 'vasileios-fasoulas',
       name: 'Vasileios Fasoulas',
       role: 'Technology Leader / Director / Architect',
@@ -86,10 +84,7 @@ export class RecommendationsComponent implements AfterViewInit, OnDestroy {
         'Omar is the sort of developer one loves to have on their team. He uses his own initiative and creativity to ' +
         'figure out, suggest and implement what is good for the project. He also feels responsible for his work so he ' +
         'has the desire to do well and tends to be attentive to details. This attitude I consider among the most ' +
-        'important traits of a good developer besides their level of skill. Skill wise he did quite well when he joined ' +
-        'us and he also has learned well since then picking up a new IDE and a lot of UI techniques around AngularJS ' +
-        'and LESS. He is open to learning and to sharing knowledge among the team. Personality wise he is very easy and ' +
-        'pleasant to get along with. I highly recommend Omar as a solid and dependable member of a dev team.',
+        'important traits of a good developer besides their level of skill.',
       image: 'alex-dobre',
       name: 'Alex Dobre',
       role: 'Lead Developer',
@@ -100,12 +95,7 @@ export class RecommendationsComponent implements AfterViewInit, OnDestroy {
         'Omar is an extremely dedicated and competent Front End Developer who is always willing to learn and expand ' +
         'his knowledge. He throws himself 100 percent into tasks and will battle away to get a job done. He was a ' +
         'valuable member of my team whose input and suggestions improved the way the team works and significantly ' +
-        'contributed to our in-house coding standards and workflow processes. He has a laid back and flexible attitude ' +
-        'towards work and fully supported changes to overhaul legacy solutions with the larger picture and future ' +
-        'maintainability in mind. Omar was the longest serving member of my team, giving him a great understanding of ' +
-        'the business as well as the architecture of the site. This helped when problem solving and isolating issues.' +
-        'I appreciated having Omar in my team as his friendly personality makes him easy to work with. He was always ' +
-        'approachable and made time when other team members required his assistance.',
+        'contributed to our in-house coding standards and workflow processes.',
       image: 'joe-stickings',
       name: 'Joe Stickings',
       role: 'Software Development Manager',
