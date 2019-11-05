@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col-12">
       <div class="glide">
-        <div class="glide__track" data-glide-el="track">
+        <div class="glide__track mb-2" data-glide-el="track">
           <ul class="glide__slides">
             <li *ngFor="let i of recommendations" class="glide__slide">
               <div class="d-flex">
@@ -25,6 +25,13 @@
               <p><fa-icon [icon]="faQuoteLeft"></fa-icon> {{ i.feedback }} <fa-icon [icon]="faQuoteRight"></fa-icon></p>
             </li>
           </ul>
+        </div>
+        <div class="glide__bullets d-flex justify-content-center" data-glide-el="controls[nav]">
+          <button
+            *ngFor="let i of recommendations; let idx = index"
+            class="glide__bullet"
+            [attr.data-glide-dir]="'=' + idx"
+          ></button>
         </div>
       </div>
     </div>

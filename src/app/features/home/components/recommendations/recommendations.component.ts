@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy } from '@angular/core';
 import { IRecommendation } from '@core/model/interfaces';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
@@ -9,7 +9,7 @@ import Glide from '@glidejs/glide';
   templateUrl: './recommendations.component.html',
   styleUrls: ['./recommendations.component.scss'],
 })
-export class RecommendationsComponent implements AfterViewInit {
+export class RecommendationsComponent implements AfterViewInit, OnDestroy {
   public faQuoteLeft: IconDefinition = faQuoteLeft;
   public faQuoteRight: IconDefinition = faQuoteRight;
   public recommendations: IRecommendation[] = [
@@ -59,13 +59,22 @@ export class RecommendationsComponent implements AfterViewInit {
       role: 'Head of Web Development',
     },
   ];
-  public slider;
+  public slider: Glide;
 
   ngAfterViewInit(): void {
     this.slider = new Glide('.glide', {
       gap: 30,
       perView: 2,
-      autoplay: 2000,
+      breakpoints: {
+        768: {
+          perView: 1,
+        },
+      },
+      autoplay: 3500,
     }).mount();
+  }
+
+  ngOnDestroy(): void {
+    this.slider = null;
   }
 }
