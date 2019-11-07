@@ -5,10 +5,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { YearsOfExperienceComponent } from './components/years-of-experience/years-of-experience.component';
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent],
+  declarations: [HeaderComponent, FooterComponent, YearsOfExperienceComponent],
   imports: [CommonModule, ReactiveFormsModule, FontAwesomeModule, RouterModule],
-  exports: [HeaderComponent, FooterComponent, FontAwesomeModule],
+  exports: [HeaderComponent, FooterComponent, FontAwesomeModule, YearsOfExperienceComponent],
 })
 export class SharedModule {}
