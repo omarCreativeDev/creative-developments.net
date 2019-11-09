@@ -5,9 +5,10 @@ import { AboutMePageComponent } from './pages/about-me-page/about-me-page.compon
 import { SharedModule } from '@shared/shared.module';
 import { MoreInfoComponent } from './components/more-info/more-info.component';
 import { AvatarAndHobbiesComponent } from './components/avatar-and-hobbies/avatar-and-hobbies.component';
+import { HighchartsChartModule } from 'highcharts-angular';
 
 @NgModule({
   declarations: [AboutMePageComponent, MoreInfoComponent, AvatarAndHobbiesComponent],
-  imports: [CommonModule, SharedModule, AboutMeRoutingModule],
+  imports: [CommonModule, SharedModule, HighchartsChartModule, AboutMeRoutingModule],
 })
 export class AboutMeModule {}
