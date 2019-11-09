@@ -14,6 +14,7 @@ export class AvatarAndHobbiesComponent {
     },
     chart: {
       height: 200,
+      width: 200,
       renderTo: 'hobbiesHighChart',
       plotBackgroundColor: null,
       plotBorderWidth: null,
