@@ -1,0 +1,37 @@
+@import '~src/styles/colors';
+@import '~src/styles/variables';
+@import '~src/styles/mixins';
+
+.my-skills-summary__group {
+  border: solid 0.2rem $primary-color;
+  border-radius: 0.5rem;
+  display: inline-block;
+  padding: 0.5rem;
+  margin: 0 0.5rem 0.5rem 0;
+  background: linear-gradient($white, $alto);
+}
+
+.my-skills-summary__label {
+  display: block;
+  margin-bottom: 0.5rem;
+  @include trajanProFont();
+}
+
+.my-skills-summary__item {
+  padding: 0.5rem;
+  background: $primary-color;
+  color: $white;
+  border-radius: 0.5rem;
+  margin: 0 0.5rem 0 0;
+  display: inline-block;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.my-skills-summary__group:hover,
+.my-skills-summary__group.active {
+  cursor: pointer;
+  background: $secondary-color;
+}
