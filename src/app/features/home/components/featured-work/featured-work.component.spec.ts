@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FeaturedWorkComponent } from './featured-work.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('FeaturedWorkComponent', () => {
   let component: FeaturedWorkComponent;
@@ -9,6 +10,7 @@ describe('FeaturedWorkComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [FeaturedWorkComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   }));
 
