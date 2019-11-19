@@ -4,10 +4,10 @@
 
 .my-skills-summary__group {
   border: solid 0.2rem $primary-color;
-  border-radius: 0.5rem;
-  display: inline-block;
-  padding: 0.5rem;
-  margin: 0 0.5rem 0.5rem 0;
+  border-radius: 1rem;
+  float: left;
+  padding: 1rem 1rem 0 1rem;
+  margin: 0 1rem 1rem 0;
   background: linear-gradient($white, $alto);
 }
 
@@ -18,11 +18,11 @@
 }
 
 .my-skills-summary__item {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   background: $primary-color;
   color: $white;
   border-radius: 0.5rem;
-  margin: 0 0.5rem 0 0;
+  margin: 0 0.5rem 1rem 0;
   display: inline-block;
 
   &:last-child {

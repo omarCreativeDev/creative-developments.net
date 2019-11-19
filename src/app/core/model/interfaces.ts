@@ -10,3 +10,8 @@ export interface IRecommendation {
   name: string;
   role: string;
 }
+
+export interface ISkillsSummaryGroup {
+  label: string;
+  skills: string[];
+}
