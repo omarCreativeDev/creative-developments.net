@@ -11,8 +11,13 @@ export interface IRecommendation {
   role: string;
 }
 
-export interface ISkillsSummaryGroup {
-  label: string;
-  skills: string[];
+export interface ISkillGroup {
   active: boolean;
+  label: string;
+  skills: ISkillDetails[];
+}
+
+export interface ISkillDetails {
+  name: string;
+  rating: string;
 }

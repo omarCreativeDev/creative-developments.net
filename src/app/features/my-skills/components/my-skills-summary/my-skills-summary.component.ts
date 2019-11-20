@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ISkillsSummaryGroup } from '@core/model/interfaces';
+import { ISkillGroup } from '@core/model/interfaces';
 import { MySkillsSummaryService } from '@core/services/my-skills-summary/my-skills-summary.service';
 
 @Component({
@@ -8,13 +8,13 @@ import { MySkillsSummaryService } from '@core/services/my-skills-summary/my-skil
   styleUrls: ['./my-skills-summary.component.scss'],
 })
 export class MySkillsSummaryComponent {
-  public groups: ISkillsSummaryGroup[] = this.mySkillsSummaryService.groups;
+  public groups: ISkillGroup[] = this.mySkillsSummaryService.groups;
 
   /**
    * Toggle group skill details visibility
    * @param group ISkillsSummaryGroup
    */
-  public toggleVisibility(group: ISkillsSummaryGroup): void {
+  public toggleVisibility(group: ISkillGroup): void {
     this.groups.map(item => (item.active = false));
     group.active = !group.active;
   }

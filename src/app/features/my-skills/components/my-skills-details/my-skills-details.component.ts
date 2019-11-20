@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ISkillsSummaryGroup } from '@core/model/interfaces';
+import { ISkillGroup } from '@core/model/interfaces';
 import { MySkillsSummaryService } from '@core/services/my-skills-summary/my-skills-summary.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { MySkillsSummaryService } from '@core/services/my-skills-summary/my-skil
   styleUrls: ['./my-skills-details.component.scss'],
 })
 export class MySkillsDetailsComponent {
-  public groups: ISkillsSummaryGroup[] = this.mySkillsSummaryService.groups;
+  public groups: ISkillGroup[] = this.mySkillsSummaryService.groups;
 
   constructor(private mySkillsSummaryService: MySkillsSummaryService) {}
 }
