@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ISkillGroup } from '@core/model/interfaces';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -108,4 +109,5 @@ export class MySkillsSummaryService {
       ],
     },
   ];
+  public activeGroup: BehaviorSubject<ISkillGroup> = new BehaviorSubject(this.groups[2]);
 }

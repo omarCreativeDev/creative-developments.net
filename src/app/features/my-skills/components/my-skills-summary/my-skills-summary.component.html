@@ -7,7 +7,7 @@
   >
     <dt class="my-skills-summary__label">{{ group.label }}</dt>
     <dd *ngFor="let skill of group.skills" class="my-skills-summary__item" [class.d-none]="!group.active">
-      {{ skill }}
+      {{ skill.name }}
     </dd>
   </dl>
 </article>

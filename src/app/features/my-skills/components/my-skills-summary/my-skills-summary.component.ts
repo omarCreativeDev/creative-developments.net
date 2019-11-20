@@ -17,6 +17,7 @@ export class MySkillsSummaryComponent {
   public toggleVisibility(group: ISkillGroup): void {
     this.groups.map(item => (item.active = false));
     group.active = !group.active;
+    this.mySkillsSummaryService.activeGroup.next(group);
   }
 
   constructor(private mySkillsSummaryService: MySkillsSummaryService) {}
