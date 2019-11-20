@@ -1,8 +1,6 @@
 <article *ngIf="activeGroup$ | async as group">
-  <div class="my-skills-details__group">
+  <div class="clearfix">
     <h2>{{ group.label }}</h2>
-    <div *ngFor="let i of group.skills" class="my-skills-details__chart" [attr.data-percent]="i.rating">
-      <span class="my-skills-details__name">{{ i.name }}</span>
-    </div>
+    <app-my-skill-chart *ngFor="let i of group.skills" [rating]="i.rating" [name]="i.name"></app-my-skill-chart>
   </div>
 </article>

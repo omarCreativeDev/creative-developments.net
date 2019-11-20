@@ -5,9 +5,10 @@ import { MySkillsPageComponent } from './pages/my-skills-page/my-skills-page.com
 import { SharedModule } from '@shared/shared.module';
 import { MySkillsSummaryComponent } from './components/my-skills-summary/my-skills-summary.component';
 import { MySkillsDetailsComponent } from './components/my-skills-details/my-skills-details.component';
+import { MySkillChartComponent } from './components/my-skill-chart/my-skill-chart.component';
 
 @NgModule({
-  declarations: [MySkillsPageComponent, MySkillsSummaryComponent, MySkillsDetailsComponent],
+  declarations: [MySkillsPageComponent, MySkillsSummaryComponent, MySkillsDetailsComponent, MySkillChartComponent],
   imports: [CommonModule, SharedModule, MySkillsRoutingModule],
 })
 export class MySkillsModule {}
