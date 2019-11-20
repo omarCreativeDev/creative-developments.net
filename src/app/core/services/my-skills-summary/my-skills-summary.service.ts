@@ -109,10 +109,10 @@ export class MySkillsSummaryService {
       label: 'Devops',
       active: false,
       skills: [
-        { name: 'Travis', rating: '75' },
-        { name: 'Jenkins', rating: '75' },
-        { name: 'Amazon web services', rating: '75' },
-        { name: 'Docker', rating: '70' },
+        { name: 'Travis', rating: '70' },
+        { name: 'Jenkins', rating: '65' },
+        { name: 'Amazon web services', rating: '50' },
+        { name: 'Docker', rating: '65' },
       ],
     },
   ];

@@ -17,7 +17,7 @@ export class MySkillChartComponent implements AfterViewInit, OnDestroy {
     lineCap: 'butt',
     barColor: '#73990b',
     trackColor: '#ecf0f1',
-    size: 220,
+    size: 210,
     animate: 500,
   };
 
