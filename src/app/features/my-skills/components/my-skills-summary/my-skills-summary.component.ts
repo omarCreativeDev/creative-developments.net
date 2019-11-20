@@ -8,10 +8,19 @@ import { ISkillsSummaryGroup } from '@core/model/interfaces';
 })
 export class MySkillsSummaryComponent {
   public groups: ISkillsSummaryGroup[] = [
-    { label: 'UI Stack', skills: ['HTML5', 'CSS3', 'CSS Grid', 'Responsive design', 'SASS / LESS', 'Flexbox', 'BEM'] },
-    { label: 'UI Libraries', skills: ['Angular material', 'Bootstrap', 'GOV.UK design system (GDS)', 'Clarity UI'] },
+    {
+      label: 'UI Stack',
+      active: false,
+      skills: ['HTML5', 'CSS3', 'CSS Grid', 'Responsive design', 'SASS / LESS', 'Flexbox', 'BEM'],
+    },
+    {
+      label: 'UI Libraries',
+      active: false,
+      skills: ['Angular material', 'Bootstrap', 'GOV.UK design system (GDS)', 'Clarity UI'],
+    },
     {
       label: 'Javascript stack',
+      active: true,
       skills: [
         'Javascript',
         'ES6',
@@ -27,13 +36,18 @@ export class MySkillsSummaryComponent {
         'React',
       ],
     },
-    { label: 'Unit testing', skills: ['Jasmine', 'Karma', 'Mocha', 'Chai'] },
-    { label: 'E2E testing', skills: ['Protractor', 'Gherkin', 'Selenium', 'Webdriver IO'] },
-    { label: 'Data Visualisation', skills: ['Highcharts', 'Ng2 charts'] },
-    { label: 'REST', skills: ['RESTful API', 'Swagger', 'Postman', 'Mocky'] },
-    { label: 'Design', skills: ['Photoshop', 'Sketch', 'Invision'] },
-    { label: 'State management', skills: ['NGRX', 'NGXS'] },
-    { label: 'Code reviews', skills: ['Pull requests', 'Pair programming', 'Crucible'] },
-    { label: 'Devops', skills: ['Travis', 'Jenkins', 'Amazon web services', 'Docker'] },
+    { label: 'Unit testing', active: false, skills: ['Jasmine', 'Karma', 'Mocha', 'Chai'] },
+    { label: 'E2E testing', active: false, skills: ['Protractor', 'Gherkin', 'Selenium', 'Webdriver IO'] },
+    { label: 'Data Visualisation', active: false, skills: ['Highcharts', 'Ng2 charts'] },
+    { label: 'REST', active: false, skills: ['RESTful API', 'Swagger', 'Postman', 'Mocky'] },
+    { label: 'Design', active: false, skills: ['Photoshop', 'Sketch', 'Invision'] },
+    { label: 'State management', active: false, skills: ['NGRX', 'NGXS'] },
+    { label: 'Code reviews', active: false, skills: ['Pull requests', 'Pair programming', 'Crucible'] },
+    { label: 'Devops', active: false, skills: ['Travis', 'Jenkins', 'Amazon web services', 'Docker'] },
   ];
+
+  public toggle(group: ISkillsSummaryGroup): void {
+    this.groups.map(item => (item.active = false));
+    group.active = !group.active;
+  }
 }

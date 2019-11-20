@@ -14,4 +14,5 @@ export interface IRecommendation {
 export interface ISkillsSummaryGroup {
   label: string;
   skills: string[];
+  active: boolean;
 }

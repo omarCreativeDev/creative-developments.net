@@ -1,6 +1,13 @@
 <article class="mb-5">
-  <dl *ngFor="let i of groups" class="my-skills-summary__group {{ i.label }}">
-    <dt class="my-skills-summary__label">{{ i.label }}</dt>
-    <dd *ngFor="let skill of i.skills" class="my-skills-summary__item">{{ skill }}</dd>
+  <dl
+    *ngFor="let group of groups"
+    class="my-skills-summary__group"
+    [class.my-skills-summary__active-group]="group.active"
+    (click)="toggle(group)"
+  >
+    <dt class="my-skills-summary__label">{{ group.label }}</dt>
+    <dd *ngFor="let skill of group.skills" class="my-skills-summary__item" [class.d-none]="!group.active">
+      {{ skill }}
+    </dd>
   </dl>
 </article>
