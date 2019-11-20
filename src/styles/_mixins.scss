@@ -18,7 +18,7 @@
 }
 
 @mixin bannerBg() {
-  background: url('~src/assets/images/banner-bg-top.png') top repeat-x,
-              url('~src/assets/images/banner-bg-bottom.png') bottom repeat-x,
+  background: url('~src/assets/images/banner/banner-bg-top.png') top repeat-x,
+              url('~src/assets/images/banner/banner-bg-bottom.png') bottom repeat-x,
               $mine-shaft;
 }
