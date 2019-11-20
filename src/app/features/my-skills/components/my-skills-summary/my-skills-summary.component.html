@@ -3,7 +3,7 @@
     *ngFor="let group of groups"
     class="my-skills-summary__group"
     [class.my-skills-summary__active-group]="group.active"
-    (click)="toggle(group)"
+    (click)="toggleVisibility(group)"
   >
     <dt class="my-skills-summary__label">{{ group.label }}</dt>
     <dd *ngFor="let skill of group.skills" class="my-skills-summary__item" [class.d-none]="!group.active">
