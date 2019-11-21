@@ -13,7 +13,7 @@
         <div *ngFor="let i of featuredWork" class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
           <a
             [attr.data-fancybox]="'gallery'"
-            [attr.data-caption]="i.caption"
+            [attr.data-title]="i.caption"
             href="/assets/images/portfolio/{{ i.imageName }}.jpg"
             class="featured-work__client-link mb-5 mb-md-0"
           >
