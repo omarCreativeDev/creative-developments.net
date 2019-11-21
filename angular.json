@@ -64,6 +64,9 @@
           "options": {
             "browserTarget": "creative-developments:build"
           },
+          "stylePreprocessorOptions": {
+            "includePaths": ["src/styles"]
+          },
           "configurations": {
             "production": {
               "browserTarget": "creative-developments:build:production"
