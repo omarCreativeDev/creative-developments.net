@@ -1,13 +1,13 @@
 @import 'variables';
 
 .input {
-  border: solid 0.1rem $mine-shaft;
+  border: solid 0.1rem $primary-color;
   border-radius: 0.4rem;
   padding: 1.7rem;
   font-size: 1.6rem;
   font-family: $font-family-base;
 
   &::placeholder {
-    color: $mine-shaft;
+    color: $primary-color;
   }
 }
