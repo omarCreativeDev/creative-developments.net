@@ -1,6 +1,6 @@
-@import '~src/styles/colors';
-@import '~src/styles/variables';
-@import '~src/styles/mixins';
+@import '_colors';
+@import '_variables';
+@import '_mixins';
 
 .portfolio-item__client-link {
   border: 0.5rem solid $white;

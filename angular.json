@@ -24,6 +24,9 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.scss", "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/styles"]
+            },
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js"
