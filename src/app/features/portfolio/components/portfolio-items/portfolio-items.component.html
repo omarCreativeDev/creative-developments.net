@@ -13,9 +13,9 @@
       />
     </a>
     <div class="d-flex align-items-center justify-content-between">
-      <div class="portfolio-item__client-caption mr-4">{{ i.caption }}</div>
+      <div class="portfolio-item__client-caption mr-4 flex-shrink-1">{{ i.caption }}</div>
       <a
-        class="btn btn-primary"
+        class="btn btn-primary flex-shrink-0"
         href="/assets/images/portfolio/{{ i.imageName }}.jpg"
         [attr.data-fancybox]="'group2'"
         [attr.data-title]="i.caption"
