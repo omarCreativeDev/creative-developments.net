@@ -5,9 +5,10 @@ import { ContactMePageComponent } from './pages/contact-me-page/contact-me-page.
 import { SharedModule } from '@shared/shared.module';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { ContactDetailsComponent } from './components/contact-details/contact-details.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [ContactMePageComponent, ContactFormComponent, ContactDetailsComponent],
-  imports: [CommonModule, SharedModule, ContactMeRoutingModule],
+  imports: [CommonModule, SharedModule, ReactiveFormsModule, ContactMeRoutingModule],
 })
 export class ContactMeModule {}
