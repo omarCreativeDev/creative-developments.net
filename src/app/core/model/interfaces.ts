@@ -21,3 +21,13 @@ export interface ISkillDetails {
   name: string;
   rating: string;
 }
+
+export interface ErrorDetails {
+  item: string;
+  type: ErrorDefinition[];
+}
+
+export interface ErrorDefinition {
+  name: string | number;
+  message: string;
+}

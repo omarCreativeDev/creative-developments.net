@@ -15,6 +15,9 @@
       [class.is-invalid]="form.get('name').errors && submitted"
       [formControlName]="'name'"
     />
+    <div *ngIf="form.get('name').errors && submitted" class="invalid-feedback">
+      {{ getFirstErrorMessage('name') }}
+    </div>
   </div>
   <div class="form-group mb-4">
     <label for="phone">Phone</label>
@@ -26,6 +29,9 @@
       [class.is-invalid]="form.get('phone').errors && submitted"
       [formControlName]="'phone'"
     />
+    <div *ngIf="form.get('phone').errors && submitted" class="invalid-feedback">
+      {{ getFirstErrorMessage('phone') }}
+    </div>
   </div>
   <div class="form-group mb-4">
     <label for="email">Email</label>
@@ -37,6 +43,9 @@
       [class.is-invalid]="form.get('email').errors && submitted"
       [formControlName]="'email'"
     />
+    <div *ngIf="form.get('email').errors && submitted" class="invalid-feedback">
+      {{ getFirstErrorMessage('email') }}
+    </div>
   </div>
   <div class="form-group mb-4">
     <label for="message">Message</label>
@@ -49,6 +58,9 @@
       [class.is-invalid]="form.get('message').errors && submitted"
       [formControlName]="'message'"
     ></textarea>
+    <div *ngIf="form.get('message').errors && submitted" class="invalid-feedback">
+      {{ getFirstErrorMessage('message') }}
+    </div>
   </div>
   <button class="btn btn-primary mt-4 mb-5" type="submit">Submit</button>
 </form>
