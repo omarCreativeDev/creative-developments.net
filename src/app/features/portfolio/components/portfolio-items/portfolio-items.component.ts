@@ -21,15 +21,15 @@ export class PortfolioItemsComponent {
       imageName: 'interoute-quick-deployment',
     },
     {
-      caption: 'AUDI UK | My Audi | Car Details',
+      caption: 'AUDI UK | Car Details',
       imageName: 'myAudi-carDetails',
     },
     {
-      caption: 'AUDI UK | My Audi | Login',
+      caption: 'AUDI UK | Login',
       imageName: 'myAudi-login',
     },
     {
-      caption: 'AUDI UK | My Audi | Profile',
+      caption: 'AUDI UK | Profile',
       imageName: 'myAudi-profile',
     },
     {
