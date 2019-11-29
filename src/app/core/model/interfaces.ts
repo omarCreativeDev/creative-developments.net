@@ -22,12 +22,19 @@ export interface ISkillDetails {
   rating: string;
 }
 
-export interface ErrorDetails {
+export interface IErrorDetails {
   item: string;
-  type: ErrorDefinition[];
+  type: IErrorDefinition[];
 }
 
-export interface ErrorDefinition {
+export interface IErrorDefinition {
   name: string | number;
   message: string;
+}
+
+export interface IContactForm {
+  email: string;
+  message: string;
+  name: string;
+  phone: string;
 }
