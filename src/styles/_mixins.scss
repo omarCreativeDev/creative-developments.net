@@ -18,7 +18,7 @@
 }
 
 @mixin bannerBg() {
-  background: url('src/assets/images/banner/banner-bg-top.png') top repeat-x,
-              url('src/assets/images/banner/banner-bg-bottom.png') bottom repeat-x,
+  background: url('/assets/images/banner/banner-bg-top.png') top repeat-x,
+              url('/assets/images/banner/banner-bg-bottom.png') bottom repeat-x,
               $primary-color;
 }
