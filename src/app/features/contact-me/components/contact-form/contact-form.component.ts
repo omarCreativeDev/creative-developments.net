@@ -4,7 +4,7 @@ import { EMAIL_PATTERN, PHONE_PATTERN } from '@core/constants/constants';
 import { IErrorDefinition, IErrorDetails } from '@core/model/interfaces';
 import { filter } from 'lodash';
 import { EmailService } from '@core/services/email/email.service';
-import { finalize } from 'rxjs/operators';
+import { finalize, take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-contact-form',
@@ -117,6 +117,7 @@ export class ContactFormComponent implements OnInit {
       this.emailService
         .send(this.form.value)
         .pipe(
+          take(1),
           finalize(() => {
             this.sendingMessage = false;
             this.submitted = false;
