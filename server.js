@@ -36,10 +36,10 @@ async function sendMail(data, callback) {
     from: `${data.name} <${data.email}>`, // sender address
     to: 'omar.creative.dev@gmail.com', // list of receivers
     subject: `Creative Developments enquiry from ${data.name}`, // Subject line
-    html: `<p>${data.name}</p>
-    <p>${data.phone}</p>,
-    <p>${data.email}</p>,
-    <p>${data.message}</p>`,
+    html: `<p><b>Name:</b> ${data.name}</p>
+    <p><b>Phone:</b> ${data.phone}</p>
+    <p><b>Email:</b> ${data.email}</p>
+    <p><b>Message:</b> ${data.message}</p>`,
   };
 
   // send mail with defined transport object

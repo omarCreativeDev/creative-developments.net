@@ -62,5 +62,13 @@
       {{ getFirstErrorMessage('message') }}
     </div>
   </div>
-  <button class="btn btn-primary mt-4 mb-5" type="submit">Submit</button>
+  <button class="btn btn-primary mt-4 mb-5 d-inline-flex align-items-center" type="submit">
+    <ng-container *ngIf="sendingMessage; else idle">
+      <span class="spinner-border spinner-border-sm mr-2 contact-form__spinner" role="status" aria-hidden="true"></span>
+      Sending
+    </ng-container>
+    <ng-template #idle>
+      Submit
+    </ng-template>
+  </button>
 </form>

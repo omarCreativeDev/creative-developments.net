@@ -4,14 +4,17 @@ import { EMAIL_PATTERN, PHONE_PATTERN } from '@core/constants/constants';
 import { IErrorDefinition, IErrorDetails } from '@core/model/interfaces';
 import { filter } from 'lodash';
 import { EmailService } from '@core/services/email/email.service';
+import { finalize } from 'rxjs/operators';
 
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
+  styleUrls: ['./contact-form.component.scss'],
 })
 export class ContactFormComponent implements OnInit {
   public form: FormGroup;
   public submitted = false;
+  public sendingMessage = false;
   public formErrorsMap: IErrorDetails[];
   private nameCharacterLimit = 120;
   private emailCharacterLimit = 120;
@@ -109,7 +112,17 @@ export class ContactFormComponent implements OnInit {
     this.submitted = true;
 
     if (this.form.valid) {
-      this.emailService.send(this.form.value);
+      this.sendingMessage = true;
+
+      this.emailService
+        .send(this.form.value)
+        .pipe(
+          finalize(() => {
+            this.sendingMessage = false;
+            this.submitted = false;
+          })
+        )
+        .subscribe(() => this.form.reset());
     }
   }
 
