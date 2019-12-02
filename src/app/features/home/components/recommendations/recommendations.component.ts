@@ -104,8 +104,6 @@ export class RecommendationsComponent implements AfterViewInit, OnDestroy {
   public slider: Glide;
 
   ngAfterViewInit(): void {
-    console.log('test 2');
-
     this.slider = new Glide('.glide', {
       gap: 30,
       perView: 2,
