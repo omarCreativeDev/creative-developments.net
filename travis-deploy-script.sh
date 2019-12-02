@@ -11,4 +11,5 @@ sshpass -p "$REMOTE_PASS" scp -o StrictHostKeyChecking=no tar-package.tgz "$REMO
 sleep 1m
 
 # Connect to remote server via ssh
-sshpass -p "$REMOTE_PASS" ssh "$REMOTE_USER"@"$REMOTE_IP" "cd $REMOTE_PATH; ./deploy.sh"
+# sshpass -p "$REMOTE_PASS" ssh "$REMOTE_USER"@"$REMOTE_IP" "cd $REMOTE_PATH; ./deploy.sh"
+sshpass -p "$REMOTE_PASS" ssh "$REMOTE_USER"@"$REMOTE_IP" "cd $REMOTE_PATH; rm -rf creative-developments; tar -xzf tar-package.tgz; mv dist/creative-developments creative-developments/; rm -rf dist/; rm tar-package.tgz;"
