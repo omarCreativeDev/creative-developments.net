@@ -22,7 +22,12 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "assets": ["src/favicon.ico", "src/assets", { "glob": "server.js", "input": "./", "output": "/" }],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              { "glob": "server.js", "input": "./backend/", "output": "./backend/" },
+              { "glob": "package.json", "input": "./backend/", "output": "./backend/" }
+            ],
             "styles": ["src/styles.scss", "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css"],
             "stylePreprocessorOptions": {
               "includePaths": ["src/styles"]

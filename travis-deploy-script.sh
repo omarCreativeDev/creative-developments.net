@@ -21,7 +21,10 @@ cd $REMOTE_PATH; \
 rm -rf creative-developments; \
 tar -xzf tar-package.tgz; \
 mv dist/creative-developments creative-developments/; \
-node creative-developments/server.js; \
+cd creative-developments/backend; \
+npm i; \
+node server.js; \
+cd ../..; \
 rm -rf dist/; \
 rm tar-package.tgz;"
 
