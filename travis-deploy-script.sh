@@ -23,7 +23,7 @@ tar -xzf tar-package.tgz; \
 mv dist/creative-developments creative-developments/; \
 cd creative-developments/backend; \
 npm i; \
-node server.js; \
+npm run start; \
 cd ../..; \
 rm -rf dist/; \
 rm tar-package.tgz;"
