@@ -12,14 +12,15 @@ import { finalize, take } from 'rxjs/operators';
   styleUrls: ['./contact-form.component.scss'],
 })
 export class ContactFormComponent implements OnInit {
-  public form: FormGroup;
-  public submitted = false;
-  public sendingMessage = false;
-  public formErrorsMap: IErrorDetails[];
-  private nameCharacterLimit = 120;
   private emailCharacterLimit = 120;
-  private phoneCharacterLimit = 120;
   private messageCharacterLimit = 500;
+  private nameCharacterLimit = 120;
+  private phoneCharacterLimit = 120;
+  public form: FormGroup;
+  public formErrorsMap: IErrorDetails[];
+  public messageSent = false;
+  public sendingMessage = false;
+  public submitted = false;
 
   constructor(private formBuilder: FormBuilder, private emailService: EmailService) {}
 
@@ -123,7 +124,14 @@ export class ContactFormComponent implements OnInit {
             this.submitted = false;
           })
         )
-        .subscribe(() => this.form.reset());
+        .subscribe(() => {
+          this.messageSent = true;
+
+          setTimeout(() => {
+            this.messageSent = false;
+            this.form.reset();
+          }, 2000);
+        });
     }
   }
 
