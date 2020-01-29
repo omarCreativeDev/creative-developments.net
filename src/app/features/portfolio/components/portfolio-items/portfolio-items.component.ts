@@ -9,6 +9,18 @@ import { IShowcaseItem } from '@core/model/interfaces';
 export class PortfolioItemsComponent {
   public portfolioItems: IShowcaseItem[] = [
     {
+      caption: 'Nhs | revalidation',
+      imageName: 'nhs-revalidation',
+    },
+    {
+      caption: 'Nhs | Evidence',
+      imageName: 'nhs-evidence',
+    },
+    {
+      caption: 'Nhs | Concerns',
+      imageName: 'nhs-concerns',
+    },
+    {
       caption: 'Interoute | Pricing',
       imageName: 'interoute-pricing',
     },

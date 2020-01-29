@@ -1,5 +1,5 @@
 <div class="row d-flex justify-content-center">
-  <div *ngFor="let i of portfolioItems" class="col-sm-12 col-md-6 col-lg-4 d-flex mb-5 flex-column">
+  <div *ngFor="let i of portfolioItems" class="col-sm-6 col-md-4 col-lg-3 d-flex mb-5 flex-column">
     <a
       [attr.data-fancybox]="'group1'"
       [attr.data-title]="i.caption"
@@ -19,7 +19,7 @@
         href="/assets/images/portfolio/{{ i.imageName }}.jpg"
         [attr.data-fancybox]="'group2'"
         [attr.data-title]="i.caption"
-        >More Info</a
+        >Details</a
       >
     </div>
   </div>
