@@ -9,8 +9,20 @@ import { IShowcaseItem } from '@core/model/interfaces';
 export class PortfolioItemsComponent {
   public portfolioItems: IShowcaseItem[] = [
     {
-      caption: 'Addison Lee | Booking',
-      imageName: 'addison-lee-booking',
+      caption: 'Addison Lee | Booking Desktop',
+      imageName: 'addison-lee-booking-desktop',
+    },
+    {
+      caption: 'Addison Lee | Booking Mobile',
+      imageName: 'addison-lee-booking-mobile',
+    },
+    {
+      caption: 'Addison Lee | Dashboard Desktop',
+      imageName: 'addison-lee-dashboard-desktop',
+    },
+    {
+      caption: 'Addison Lee | Dashboard Mobile',
+      imageName: 'addison-lee-dashboard-mobile',
     },
     {
       caption: 'Nhs | revalidation',
