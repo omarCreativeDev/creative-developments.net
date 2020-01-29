@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { IShowcaseItem } from '@core/model/interfaces';
+import { NgxMasonryComponent } from 'ngx-masonry';
+import imagesLoaded from 'imagesloaded';
 
 @Component({
   selector: 'app-portfolio-items',
   templateUrl: './portfolio-items.component.html',
   styleUrls: ['./portfolio-items.component.scss'],
 })
-export class PortfolioItemsComponent {
+export class PortfolioItemsComponent implements AfterViewInit {
+  @ViewChild('masonryEl', { static: false }) public masonryEl: NgxMasonryComponent;
+  public imagesLoaded: imagesLoaded;
   public portfolioItems: IShowcaseItem[] = [
     {
       caption: 'Addison Lee | Booking Desktop',
@@ -137,4 +141,8 @@ export class PortfolioItemsComponent {
       imageName: 'confused-broadband',
     },
   ];
+
+  ngAfterViewInit(): void {
+    this.imagesLoaded = new imagesLoaded(document.querySelectorAll('.masonry-item'), () => this.masonryEl.layout());
+  }
 }
