@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PortfolioItemsComponent } from './portfolio-items.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('PortfolioItemsComponent', () => {
   let component: PortfolioItemsComponent;
@@ -9,6 +10,7 @@ describe('PortfolioItemsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [PortfolioItemsComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   }));
 
