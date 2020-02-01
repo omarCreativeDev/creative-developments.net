@@ -14,3 +14,8 @@
 .portfolio-item__client-caption {
   @include trajanProFont();
 }
+
+.portfolio-item__spinner {
+  height: 6rem;
+  width: 6rem;
+}
