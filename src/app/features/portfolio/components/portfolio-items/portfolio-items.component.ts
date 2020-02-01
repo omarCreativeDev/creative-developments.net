@@ -11,6 +11,7 @@ import imagesLoaded from 'imagesloaded';
 export class PortfolioItemsComponent implements AfterViewInit {
   @ViewChild('masonryEl', { static: false }) public masonryEl: NgxMasonryComponent;
   public imagesLoaded: imagesLoaded;
+  public portFolioLoading = true;
   public portfolioItems: IShowcaseItem[] = [
     {
       caption: 'Addison Lee | Booking Desktop',
@@ -143,6 +144,9 @@ export class PortfolioItemsComponent implements AfterViewInit {
   ];
 
   ngAfterViewInit(): void {
-    this.imagesLoaded = new imagesLoaded(document.querySelectorAll('.masonry-item'), () => this.masonryEl.layout());
+    this.imagesLoaded = new imagesLoaded(document.querySelectorAll('.masonry-item'), () => {
+      this.masonryEl.layout();
+      this.portFolioLoading = false;
+    });
   }
 }
