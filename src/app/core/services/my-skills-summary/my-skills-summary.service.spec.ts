@@ -6,7 +6,7 @@ describe('MySkillsSummaryService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: MySkillsSummaryService = TestBed.get(MySkillsSummaryService);
+    const service: MySkillsSummaryService = TestBed.inject(MySkillsSummaryService);
     expect(service).toBeTruthy();
   });
 });
