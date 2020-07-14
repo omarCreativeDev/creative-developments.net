@@ -9,7 +9,7 @@ import imagesLoaded from 'imagesloaded';
   styleUrls: ['./portfolio-items.component.scss'],
 })
 export class PortfolioItemsComponent implements AfterViewInit {
-  @ViewChild('masonryEl', { static: false }) public masonryEl: NgxMasonryComponent;
+  @ViewChild('masonryEl') public masonryEl: NgxMasonryComponent;
   public imagesLoaded: imagesLoaded;
   public portFolioLoading = true;
   public portfolioItems: IShowcaseItem[] = [

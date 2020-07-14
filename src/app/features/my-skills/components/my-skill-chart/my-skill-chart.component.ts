@@ -9,7 +9,7 @@ import EasyPieChart from 'easy-pie-chart';
 export class MySkillChartComponent implements AfterViewInit, OnDestroy {
   @Input() public rating: number;
   @Input() public name: string;
-  @ViewChild('chartEl', { static: false }) public chartEl: ElementRef;
+  @ViewChild('chartEl') public chartEl: ElementRef;
   public chart: EasyPieChart;
   public options: object = {
     scaleColor: '#ecf0f1',
