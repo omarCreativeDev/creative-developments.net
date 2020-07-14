@@ -17,6 +17,15 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "ngx-masonry",
+              "imagesloaded",
+              "highcharts",
+              "lodash",
+              "easy-pie-chart",
+              "masonry-layout",
+              "ev-emitter/ev-emitter"
+            ],
             "aot": true,
             "outputPath": "dist/creative-developments",
             "index": "src/index.html",
