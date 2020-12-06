@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { PortfolioItemsComponent } from './portfolio-items.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -7,12 +7,14 @@ describe('PortfolioItemsComponent', () => {
   let component: PortfolioItemsComponent;
   let fixture: ComponentFixture<PortfolioItemsComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [PortfolioItemsComponent],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [PortfolioItemsComponent],
+        schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(PortfolioItemsComponent);
