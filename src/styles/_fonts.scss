@@ -1,14 +1,16 @@
 @font-face {
-  font-family: 'trajan-pro';
-  src: url('/assets/fonts/trajan-pro/trajan-pro.eot');
-  src: local(trajan-pro), url('/assets/fonts/trajan-pro/trajan-pro.woff') format('woff'),
-    url('/assets/fonts/trajan-pro/trajan-pro.ttf') format('truetype'),
-    url('/assets/fonts/trajan-pro/trajan-pro.svg') format('svg');
+  font-family: "trajan-pro";
+  src: url("/assets/fonts/trajan-pro/trajan-pro.eot");
+  src: local(trajan-pro),
+    url("/assets/fonts/trajan-pro/trajan-pro.woff") format("woff"),
+    url("/assets/fonts/trajan-pro/trajan-pro.ttf") format("truetype"),
+    url("/assets/fonts/trajan-pro/trajan-pro.svg") format("svg");
 }
 @font-face {
-  font-family: 'lucida-sans';
-  src: url('/assets/fonts/lucida-sans/lucida-sans.eot');
-  src: local(lucida-sans), url('/assets/fonts/lucida-sans/lucida-sans.woff') format('woff'),
-    url('/assets/fonts/lucida-sans/lucida-sans.ttf') format('truetype'),
-    url('/assets/fonts/lucida-sans/lucida-sans.svg') format('svg');
+  font-family: "lucida-sans";
+  src: url("/assets/fonts/lucida-sans/lucida-sans.eot");
+  src: local(lucida-sans),
+    url("/assets/fonts/lucida-sans/lucida-sans.woff") format("woff"),
+    url("/assets/fonts/lucida-sans/lucida-sans.ttf") format("truetype"),
+    url("/assets/fonts/lucida-sans/lucida-sans.svg") format("svg");
 }
