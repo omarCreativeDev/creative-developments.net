@@ -1,5 +1,5 @@
-@import "colors";
-@import "variables";
+@import 'colors';
+@import 'variables';
 
 @mixin ellipsis() {
   text-overflow: ellipsis;
@@ -19,6 +19,5 @@
 
 @mixin bannerBg() {
   background: url('/assets/images/banner/banner-bg-top.png') top repeat-x,
-              url('/assets/images/banner/banner-bg-bottom.png') bottom repeat-x,
-              $primary-color;
+    url('/assets/images/banner/banner-bg-bottom.png') bottom repeat-x, $primary-color;
 }
