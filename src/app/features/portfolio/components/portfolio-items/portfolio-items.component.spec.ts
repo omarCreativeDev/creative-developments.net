@@ -22,6 +22,7 @@ describe('PortfolioItemsComponent', () => {
     fixture.detectChanges();
   });
 
+  // todo fix this
   xit('should create', () => {
     expect(component).toBeTruthy();
   });
