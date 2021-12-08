@@ -1,4 +1,2 @@
-**/*.md
-**/assets
-.prettierignore
-yarn.lock
+build
+coverage

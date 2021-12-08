@@ -1,15 +1,19 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
 
-import { YearsOfExperienceComponent } from './years-of-experience.component';
+import { YearsOfExperienceComponent } from "./years-of-experience.component";
+jest.mock("moment", () => () => ({
+  format: () => "2018–01–30T12:34:56+00:00",
+  diff: () => "2018–01–30T12:34:56+00:00"
+}));
 
-describe('YearsOfExperienceComponent', () => {
+describe("YearsOfExperienceComponent", () => {
   let component: YearsOfExperienceComponent;
   let fixture: ComponentFixture<YearsOfExperienceComponent>;
 
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
-        declarations: [YearsOfExperienceComponent],
+        declarations: [YearsOfExperienceComponent]
       }).compileComponents();
     })
   );
@@ -20,7 +24,7 @@ describe('YearsOfExperienceComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
