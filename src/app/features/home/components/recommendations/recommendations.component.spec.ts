@@ -22,6 +22,7 @@ describe('RecommendationsComponent', () => {
     fixture.detectChanges();
   });
 
+  // TODO fix
   xit('should create', () => {
     expect(component).toBeTruthy();
   });
