@@ -22,6 +22,10 @@ rm -rf creative-developments; \
 tar -xzf tar-package.tgz; \
 mv dist/creative-developments creative-developments/; \
 cd creative-developments/backend; \
+
+# kill node to bypass `EADDRINUSE, Address/port already in use` error
+killall -9 node
+
 npm i; \
 npm run start; \
 cd ../..; \
