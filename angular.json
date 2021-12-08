@@ -26,7 +26,6 @@
               "masonry-layout",
               "ev-emitter/ev-emitter"
             ],
-            "aot": true,
             "outputPath": "dist/creative-developments",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -35,17 +34,34 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              { "glob": "server.js", "input": "./backend/", "output": "./backend/" },
-              { "glob": "package.json", "input": "./backend/", "output": "./backend/" }
+              {
+                "glob": "server.js",
+                "input": "./backend/",
+                "output": "./backend/"
+              },
+              {
+                "glob": "package.json",
+                "input": "./backend/",
+                "output": "./backend/"
+              }
             ],
-            "styles": ["src/styles.scss", "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css"],
+            "styles": [
+              "src/styles.scss",
+              "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css"
+            ],
             "stylePreprocessorOptions": {
               "includePaths": ["src/styles"]
             },
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js"
-            ]
+            ],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -59,7 +75,6 @@
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -75,7 +90,8 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
