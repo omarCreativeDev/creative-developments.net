@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { IShowcaseItem } from '@core/model/interfaces';
 import { NgxMasonryComponent } from 'ngx-masonry';
-import imagesLoaded from 'imagesloaded';
+const imagesLoaded = require('imagesloaded');
 
 @Component({
   selector: 'app-portfolio-items',
@@ -10,7 +10,7 @@ import imagesLoaded from 'imagesloaded';
 })
 export class PortfolioItemsComponent implements AfterViewInit {
   @ViewChild('masonryEl') public masonryEl: NgxMasonryComponent;
-  public imagesLoaded: imagesLoaded;
+  public imagesLoaded: typeof imagesLoaded;
   public portFolioLoading = true;
   public portfolioItems: IShowcaseItem[] = [
     {

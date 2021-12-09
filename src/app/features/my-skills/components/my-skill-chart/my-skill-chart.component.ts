@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Input, OnDestroy, ViewChild } from '@angular/core';
-import EasyPieChart from 'easy-pie-chart';
+const EasyPieChart = require('easy-pie-chart');
 
 @Component({
   selector: 'app-my-skill-chart',
@@ -10,7 +10,7 @@ export class MySkillChartComponent implements AfterViewInit, OnDestroy {
   @Input() public rating: number;
   @Input() public name: string;
   @ViewChild('chartEl') public chartEl: ElementRef;
-  public chart: EasyPieChart;
+  public chart: typeof EasyPieChart;
   public options: object = {
     scaleColor: '#ecf0f1',
     lineWidth: 20,
