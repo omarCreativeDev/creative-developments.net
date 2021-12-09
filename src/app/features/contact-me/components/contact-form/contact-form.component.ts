@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, ValidationErrors, Validators } from "@angular/forms";
 import { EMAIL_PATTERN, PHONE_PATTERN } from '@core/constants/constants';
 import { IErrorDefinition, IErrorDetails } from '@core/model/interfaces';
 import { filter } from 'lodash';
@@ -133,6 +133,10 @@ export class ContactFormComponent implements OnInit {
           }, 2000);
         });
     }
+  }
+
+  public getFormControlErrors(formControlName: string): ValidationErrors | null {
+    return this.form.get(formControlName)?.errors || null;
   }
 
   public getFirstErrorMessage(formControlName: string): string | null {

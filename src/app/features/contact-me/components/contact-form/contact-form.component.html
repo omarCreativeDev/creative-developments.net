@@ -12,10 +12,9 @@
       class="form-control"
       id="name"
       placeholder="Enter your name..."
-      [class.is-invalid]="form.get('name').errors && submitted"
-      [formControlName]="'name'"
-    />
-    <div *ngIf="form.get('name').errors && submitted" class="invalid-feedback">
+      [class.is-invalid]="getFormControlErrors('name') && submitted"
+      [formControlName]="'name'" />
+    <div *ngIf="getFormControlErrors('name') && submitted" class="invalid-feedback">
       {{ getFirstErrorMessage('name') }}
     </div>
   </div>
@@ -26,10 +25,9 @@
       class="form-control"
       id="phone"
       placeholder="Enter your phone number..."
-      [class.is-invalid]="form.get('phone').errors && submitted"
-      [formControlName]="'phone'"
-    />
-    <div *ngIf="form.get('phone').errors && submitted" class="invalid-feedback">
+      [class.is-invalid]="getFormControlErrors('phone') && submitted"
+      [formControlName]="'phone'" />
+    <div *ngIf="getFormControlErrors('phone') && submitted" class="invalid-feedback">
       {{ getFirstErrorMessage('phone') }}
     </div>
   </div>
@@ -40,10 +38,9 @@
       class="form-control"
       id="email"
       placeholder="Enter your email..."
-      [class.is-invalid]="form.get('email').errors && submitted"
-      [formControlName]="'email'"
-    />
-    <div *ngIf="form.get('email').errors && submitted" class="invalid-feedback">
+      [class.is-invalid]="getFormControlErrors('email') && submitted"
+      [formControlName]="'email'" />
+    <div *ngIf="getFormControlErrors('email') && submitted" class="invalid-feedback">
       {{ getFirstErrorMessage('email') }}
     </div>
   </div>
@@ -55,10 +52,10 @@
       id="message"
       rows="7"
       placeholder="Enter your message..."
-      [class.is-invalid]="form.get('message').errors && submitted"
+      [class.is-invalid]="getFormControlErrors('message') && submitted"
       [formControlName]="'message'"
     ></textarea>
-    <div *ngIf="form.get('message').errors && submitted" class="invalid-feedback">
+    <div *ngIf="getFormControlErrors('message') && submitted" class="invalid-feedback">
       {{ getFirstErrorMessage('message') }}
     </div>
   </div>

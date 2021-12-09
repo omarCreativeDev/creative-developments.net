@@ -1,11 +1,10 @@
 {
   "name": "creative-developments",
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "prepare": "husky install",
     "ng": "ng",
-    "start": "ng serve --port 8888",
+    "start": "ng serve",
     "dev": "npm-run-all -p start server",
     "build": "ng build",
     "build:prod": "ng build --configuration production",
