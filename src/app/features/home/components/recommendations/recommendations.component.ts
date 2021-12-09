@@ -2,7 +2,7 @@ import { AfterViewInit, Component, OnDestroy } from '@angular/core';
 import { IRecommendation } from '@core/model/interfaces';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
-const Glide = require('@glidejs/glide');
+import Glide from '@glidejs/glide';
 
 @Component({
   selector: 'app-recommendations',
@@ -101,7 +101,7 @@ export class RecommendationsComponent implements AfterViewInit, OnDestroy {
       role: 'Software Development Manager',
     },
   ];
-  public slider: typeof Glide;
+  public slider: any;
 
   ngAfterViewInit(): void {
     this.slider = new Glide('.glide', {
