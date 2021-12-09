@@ -135,8 +135,14 @@ export class ContactFormComponent implements OnInit {
     }
   }
 
-  public getFirstErrorMessage(formControlName: string): string {
-    const errorType: string = Object.keys(this.form.get(formControlName).errors)[0];
+  public getFirstErrorMessage(formControlName: string): string | null {
+    const errors = this.form.get(formControlName)?.errors;
+
+    if (!errors) {
+      return null;
+    }
+
+    const errorType: string = Object.keys(errors)[0];
     const errorDefinitions: IErrorDefinition[] = filter(this.formErrorsMap, ['item', formControlName])[0].type;
     return filter(errorDefinitions, ['name', errorType])[0].message;
   }
