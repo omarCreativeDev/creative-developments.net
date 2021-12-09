@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Moment } from 'moment';
-import * as moment from 'moment';
+import moment from 'moment';
 
 @Component({
   selector: 'app-years-of-experience',
