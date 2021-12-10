@@ -27,10 +27,14 @@ cd creative-developments/backend; \
 killall -9 node
 
 npm i; \
+echo "Installing backend dependencies..."; \
 npm run start; \
+echo "Server running, now cleanup..."; \
 cd ../..; \
 rm -rf dist/; \
 rm tar-package.tgz;"
+echo "Exit"
+exit 0
 
 # Alternatively connect to remote server via ssh, then run deploy script on hosting server
 # sshpass -p "$REMOTE_PASS" ssh "$REMOTE_USER"@"$REMOTE_IP" "cd $REMOTE_PATH; ./deploy.sh"
