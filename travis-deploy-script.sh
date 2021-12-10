@@ -16,6 +16,8 @@ sleep 1m
 echo "Connect to remote server via ssh..."
 sshpass -p "$REMOTE_PASS" ssh "$REMOTE_USER"@"$REMOTE_IP" "\
 cd $REMOTE_PATH; \
+pwd; \
+ls -la; \
 
 echo "Remove old directory and unpackage tar..."
 rm -rf creative-developments; \
@@ -30,6 +32,8 @@ rm tar-package.tgz;"
 killall -9 node
 
 echo "Installing backend dependencies..."
+pwd; \
+ls -la; \
 cd creative-developments/backend; \
 npm i; \
 
