@@ -30,7 +30,7 @@ cd creative-developments/backend; \
 killall -9 node
 
 echo "Installing backend dependencies..."
-npm i
+npm i; \
 
 echo "Start node server... then cleanup"
 npm run start &; \
