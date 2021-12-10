@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "forever server.js"
+    "start": "forever --minUptime 10000 --spinSleepTime 30000 server.js"
   },
   "author": "Omar Mirza",
   "license": "ISC",
