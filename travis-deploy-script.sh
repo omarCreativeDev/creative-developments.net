@@ -32,11 +32,14 @@ killall -9 node
 echo "Installing backend dependencies..."
 npm i; \
 
-echo "Start node server... then cleanup"
-npm run start; \
+echo "Cleanup..."
 cd ../..; \
 rm -rf dist/; \
 rm tar-package.tgz;"
+
+echo "Start node server..."
+cd creative-developments/backend; \
+npm run start; \
 
 echo "Exit"; \
 exit 0
