@@ -33,7 +33,7 @@ echo "Installing backend dependencies..."
 npm i; \
 
 echo "Start node server... then cleanup"
-npm run start &; \
+npm run start; \
 cd ../..; \
 rm -rf dist/; \
 rm tar-package.tgz;"
