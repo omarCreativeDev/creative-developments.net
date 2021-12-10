@@ -23,5 +23,5 @@ script:
 
 after_success:
   - sh travis-merge-script.sh
-  - npm run build -- --prod
+  - npm run build -- --configuration production
   - sh travis-deploy-script.sh
