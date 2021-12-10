@@ -36,7 +36,7 @@ echo "Start node server... then cleanup"
 npm run start &; \
 cd ../..; \
 rm -rf dist/; \
-rm tar-package.tgz; \
+rm tar-package.tgz;"
 
 echo "Exit"; \
 exit 0
