@@ -34,7 +34,7 @@ killall -9 node
 echo "Installing backend dependencies..."
 pwd; \
 ls -la; \
-cd creative-developments/backend; \
+cd backend; \
 npm i; \
 
 echo "Start node server..."
