@@ -38,10 +38,10 @@ cd backend; \
 npm i; \
 
 echo "Start node server..."
-npm run start; \
+npm run start & echo "Exit" & exit 0; \
 
-echo "Exit"; \
-exit 0
+# echo "Exit"; \
+# exit 0
 
 # Alternatively connect to remote server via ssh, then run deploy script on hosting server
 # sshpass -p "$REMOTE_PASS" ssh "$REMOTE_USER"@"$REMOTE_IP" "cd $REMOTE_PATH; ./deploy.sh"
