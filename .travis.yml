@@ -25,3 +25,5 @@ after_success:
   - sh travis-merge-script.sh
   - npm run build -- --configuration production
   - sh travis-deploy-script.sh
+  - cd backend & npm run start &
+  - echo "Exit"

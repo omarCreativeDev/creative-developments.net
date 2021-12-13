@@ -38,7 +38,7 @@ cd backend; \
 npm i; \
 
 echo "Start node server..."
-npm run start & echo "Exit" & exit 0; \
+# npm run start & echo "Exit" & exit 0; \
 
 # echo "Exit"; \
 # exit 0
