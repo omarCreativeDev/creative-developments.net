@@ -1,0 +1,22 @@
+name: Creative developments workflow
+'on':
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: use Node.js
+        uses: actions/setup-node@v2
+      - name: install
+        run: npm ci
+      - name: test
+        run: npm run test
+      - name: build
+        run: npm run build -- --configuration production
