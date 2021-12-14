@@ -12,27 +12,34 @@ app.listen(3000, () => {
 });
 
 app.post("/sendEmail", (req, res) => {
-  let user = req.body;
-  sendMail(user, (info) => {
-    console.log(`Email sent!`, `Id: ${info.messageId}`);
+  let body = req.body;
+  sendMail(body, (info) => {
+    console.log(`Email sent!`);
+    console.log(info);
     res.send(info);
   }).catch((error) => console.log("error", error));
 });
 
 async function sendMail(data, callback) {
+  // Generate test SMTP service account from ethereal.email
+  // Only needed if you don't have a real mail account for testing
+  let testAccount = await nodemailer.createTestAccount();
+
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
+    host: "smtp.ethereal.email",
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: "info.creativedevelopments@gmail.com",
-      pass: "ihatemanu123"
-    }
+      user: testAccount.user, // generated ethereal user
+      pass: testAccount.pass, // generated ethereal password
+    },
+    sendMail: true
   });
 
   let mailOptions = {
     from: `${data.name} <${data.email}>`, // sender address
+    name: "creativedevelopments.net",
     to: "omar.creative.dev@gmail.com", // list of receivers
     subject: `Creative Developments enquiry from ${data.name}`, // Subject line
     html: `<p><b>Name:</b> ${data.name}</p>
