@@ -14,9 +14,31 @@ jobs:
       - uses: actions/checkout@v2
       - name: use Node.js
         uses: actions/setup-node@v2
-      - name: install
+      - name: install dependencies
         run: npm ci
-      - name: test
+      - name: run tests
         run: npm run test
-      - name: build
+      - name: build app
         run: npm run build -- --configuration production
+
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE,
+      # so your workflow can access it
+      - uses: actions/checkout@master
+
+      # Copying files and artifacts via SSH
+      - name: Copying files to server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          # ensure destination folder on the remote server is completely cleaned before downloading new files
+          rm: true
+          # defines the folder, that will be uploaded on the remote server
+          source: "dist/"
+          # full path to the folder on the remote server, where the files from 'source' will be uploaded
+          target: "${{ secrets.REMOTE_DIR }}"
+
