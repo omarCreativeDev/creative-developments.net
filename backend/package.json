@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "forever --minUptime 10000 --spinSleepTime 10000 server.js"
+    "start": "forever start server.js"
   },
   "author": "Omar Mirza",
   "license": "ISC",
@@ -14,6 +14,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "forever": "^3.0.2",
-    "nodemailer": "^6.4.0"
+    "nodemailer": "^6.4.0",
+    "nodemon": "^2.0.15"
   }
 }
