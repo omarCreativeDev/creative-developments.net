@@ -49,7 +49,7 @@ jobs:
             cd "${{ secrets.REMOTE_DIR }}/creative-developments/backend"
             killall -9 node
             npm i
-            npm run start &
+            npm run start & echo "finished"
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.PRIVATE_SSH_KEY }}
