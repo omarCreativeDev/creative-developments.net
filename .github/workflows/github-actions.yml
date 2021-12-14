@@ -45,11 +45,9 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           script: |
-            whoami
+            cd "${{ secrets.REMOTE_DIR }}/creative-developments/backend"
             ls -la
-            cd "${{ secrets.REMOTE_DIR }}"
-            cd creative-developments/backend"
-            npm ci
+            npm i
             npm run start
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
