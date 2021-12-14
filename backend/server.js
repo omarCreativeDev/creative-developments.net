@@ -21,9 +21,7 @@ app.post('/sendEmail', (req, res) => {
 });
 
 async function sendMail(data) {
-  const SENDGRID_API_KEY = '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';
-
-  sendgrid.setApiKey(SENDGRID_API_KEY);
+  sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
   const msg = {
     to: 'omar.creative.dev@gmail.com', // list of receivers
