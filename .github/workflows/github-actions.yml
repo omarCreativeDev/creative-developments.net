@@ -33,7 +33,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           # ensure destination folder on the remote server is completely cleaned before downloading new files
           rm: true
-          # defines the folder, that will be uploaded on the remote server
+          # defines the folder, that will be uploaded to the remote server
           source: "dist/"
           # full path to the folder on the remote server, where the files from 'source' will be uploaded
           target: "${{ secrets.REMOTE_DIR }}"
