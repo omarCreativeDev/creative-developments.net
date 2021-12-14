@@ -47,7 +47,8 @@ jobs:
           script: |
             whoami
             ls -la
-            cd "${{ secrets.REMOTE_DIR }}/creative-developments/backend"
+            cd "${{ secrets.REMOTE_DIR }}"
+            cd creative-developments/backend"
             npm ci
             npm run start
           host: ${{ secrets.REMOTE_HOST }}
