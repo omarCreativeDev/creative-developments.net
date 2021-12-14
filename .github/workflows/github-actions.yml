@@ -46,9 +46,8 @@ jobs:
         with:
           script: |
             cd "${{ secrets.REMOTE_DIR }}/creative-developments/backend"
-            ls -la
             npm i
-            npm run start &
+            npm run start & sleep 30s &
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.PRIVATE_SSH_KEY }}
