@@ -42,13 +42,14 @@ jobs:
           strip_components: 1
 
       - name: start backend node server
-        uses: fifsky/ssh-action@master
+        uses: appleboy/ssh-action@master
         with:
-          command: |
-            ls -a
+          script: |
+            whoami
+            ls -la
             cd "${{ secrets.REMOTE_DIR }}/creative-developments/backend"
             npm ci
             npm run start
           host: ${{ secrets.REMOTE_HOST }}
-          user: ${{ secrets.REMOTE_USER }}
+          username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.PRIVATE_SSH_KEY }}
