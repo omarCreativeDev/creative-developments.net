@@ -43,6 +43,9 @@ jobs:
 
       - name: start backend node server
         uses: appleboy/ssh-action@master
+        env:
+          CI: true
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
         with:
           # kill node to bypass `EADDRINUSE, Address/port already in use` error
           script: |
