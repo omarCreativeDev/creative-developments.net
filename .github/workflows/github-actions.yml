@@ -50,7 +50,6 @@ jobs:
             killall -9 node
             npm i
             npm run start & sleep 10s &
-            echo "finished." &
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.PRIVATE_SSH_KEY }}
