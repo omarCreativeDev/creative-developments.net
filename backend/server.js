@@ -1,46 +1,33 @@
-const express = require("express");
-const cors = require("cors");
-const bodyParser = require("body-parser");
-const nodemailer = require("nodemailer");
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const sendgrid = require('@sendgrid/mail');
 
 const app = express();
-app.use(cors({ origin: "*" }));
+app.use(cors({ origin: '*' }));
 app.use(bodyParser.json());
 
 app.listen(3000, () => {
-  console.log("server started on port 3000");
+  console.log('server started on port 3000');
 });
 
-app.post("/sendEmail", (req, res) => {
+app.post('/sendEmail', (req, res) => {
   let body = req.body;
   sendMail(body, (info) => {
     console.log(`Email sent!`);
     console.log(info);
     res.send(info);
-  }).catch((error) => console.log("error", error));
+  }).catch((error) => console.log('error', error));
 });
 
-async function sendMail(data, callback) {
-  // Generate test SMTP service account from ethereal.email
-  // Only needed if you don't have a real mail account for testing
-  let testAccount = await nodemailer.createTestAccount();
+async function sendMail(data) {
+  const SENDGRID_API_KEY = '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';
 
-  // create reusable transporter object using the default SMTP transport
-  let transporter = nodemailer.createTransport({
-    host: "smtp.ethereal.email",
-    port: 587,
-    secure: false, // true for 465, false for other ports
-    auth: {
-      user: testAccount.user, // generated ethereal user
-      pass: testAccount.pass, // generated ethereal password
-    },
-    sendMail: true
-  });
+  sendgrid.setApiKey(SENDGRID_API_KEY);
 
-  let mailOptions = {
+  const msg = {
+    to: 'omar.creative.dev@gmail.com', // list of receivers
     from: `${data.name} <${data.email}>`, // sender address
-    name: "creativedevelopments.net",
-    to: "omar.creative.dev@gmail.com", // list of receivers
     subject: `Creative Developments enquiry from ${data.name}`, // Subject line
     html: `<p><b>Name:</b> ${data.name}</p>
     <p><b>Phone:</b> ${data.phone}</p>
@@ -48,8 +35,12 @@ async function sendMail(data, callback) {
     <p><b>Message:</b> ${data.message}</p>`
   };
 
-  // send mail with defined transport object
-  let info = await transporter.sendMail(mailOptions);
-
-  callback(info);
+  sendgrid
+    .send(msg)
+    .then((resp) => {
+      console.log('Email sent\n', resp);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 }
