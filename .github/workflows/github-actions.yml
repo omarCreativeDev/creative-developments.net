@@ -37,4 +37,7 @@ jobs:
           source: "dist/creative-developments/"
           # full path to the folder on the remote server, where the files from 'source' will be uploaded
           target: "${{ secrets.REMOTE_DIR }}"
+          # remove the specified number of leading path elements
+          # i.e, remove dist folder
+          strip_components: 1
 
