@@ -25,7 +25,7 @@ async function sendMail(data) {
 
   const msg = {
     to: 'omar.creative.dev@gmail.com', // list of receivers
-    from: `${data.name} <${data.email}>`, // sender address
+    from: 'Omar Mirza <omar.creative.dev@gmail.com>', // sender address
     subject: `Creative Developments enquiry from ${data.name}`, // Subject line
     html: `<p><b>Name:</b> ${data.name}</p>
     <p><b>Phone:</b> ${data.phone}</p>
@@ -39,6 +39,6 @@ async function sendMail(data) {
       console.log('Email sent\n', resp);
     })
     .catch((error) => {
-      console.error(error);
+      console.error(error.response.body);
     });
 }
