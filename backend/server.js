@@ -13,14 +13,12 @@ app.listen(3000, () => {
 
 app.post('/sendEmail', (req, res) => {
   let body = req.body;
-  sendMail(body, (info) => {
-    console.log(`Email sent!`);
-    console.log(info);
-    res.send(info);
+  sendMail(body, () => {
+    res.send();
   }).catch((error) => console.log('error', error));
 });
 
-async function sendMail(data) {
+async function sendMail(data, callback) {
   sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
   const msg = {
@@ -33,7 +31,7 @@ async function sendMail(data) {
     <p><b>Message:</b> ${data.message}</p>`
   };
 
-  sendgrid
+  await sendgrid
     .send(msg)
     .then((resp) => {
       console.log('Email sent\n', resp);
@@ -41,4 +39,6 @@ async function sendMail(data) {
     .catch((error) => {
       console.error(error.response.body);
     });
+
+  callback();
 }
