@@ -22,7 +22,6 @@ export class MySkillChartComponent implements AfterViewInit, OnDestroy {
   };
 
   ngAfterViewInit(): void {
-    const foo = 'test';
     this.chart = new EasyPieChart(this.chartEl.nativeElement, this.options);
   }
 
