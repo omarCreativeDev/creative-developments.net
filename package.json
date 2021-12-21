@@ -4,7 +4,7 @@
   "scripts": {
     "prepare": "husky install",
     "ng": "ng",
-    "start": "ng serve",
+    "start": "concurrently \"ng serve\" \"cd backend && npm run start\"",
     "dev": "npm-run-all -p start server",
     "build": "ng build",
     "build:prod": "ng build --configuration production",
@@ -71,6 +71,7 @@
     "@typescript-eslint/eslint-plugin": "5.8.0",
     "@typescript-eslint/parser": "5.8.0",
     "codelyzer": "^6.0.1",
+    "concurrently": "^6.5.1",
     "eslint": "8.5.0",
     "husky": "^7.0.4",
     "jest": "^27.4.3",
