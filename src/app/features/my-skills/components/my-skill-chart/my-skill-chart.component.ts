@@ -4,7 +4,7 @@ const EasyPieChart = require('easy-pie-chart');
 @Component({
   selector: 'app-my-skill-chart',
   templateUrl: './my-skill-chart.component.html',
-  styleUrls: ['./my-skill-chart.component.scss'],
+  styleUrls: ['./my-skill-chart.component.scss']
 })
 export class MySkillChartComponent implements AfterViewInit, OnDestroy {
   @Input() public rating: string;
@@ -18,10 +18,11 @@ export class MySkillChartComponent implements AfterViewInit, OnDestroy {
     barColor: '#73990b',
     trackColor: '#ecf0f1',
     size: 210,
-    animate: 500,
+    animate: 500
   };
 
   ngAfterViewInit(): void {
+    const foo = 'test';
     this.chart = new EasyPieChart(this.chartEl.nativeElement, this.options);
   }
 
