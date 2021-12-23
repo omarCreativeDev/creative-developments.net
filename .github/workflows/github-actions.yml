@@ -52,6 +52,7 @@ jobs:
           envs: SENDGRID_API_KEY
           # kill node to bypass `EADDRINUSE, Address/port already in use` error
           script: |
+            export SENDGRID_API_KEY=${{ secrets.SENDGRID_API_KEY }}
             cd "${{ secrets.REMOTE_DIR }}/creative-developments/backend"
             killall -9 node
             npm i
