@@ -44,7 +44,7 @@ jobs:
       - name: start backend node server
         uses: appleboy/ssh-action@master
         env:
-          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          SENDGRID_API_KEY: ${{ github.SENDGRID_API_KEY }}
         with:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
