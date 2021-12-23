@@ -49,11 +49,8 @@ jobs:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.PRIVATE_SSH_KEY }}
-          envs: SENDGRID_API_KEY
           # kill node to bypass `EADDRINUSE, Address/port already in use` error
           script: |
-            echo "key $SENDGRID_API_KEY" $SENDGRID_API_KEY
-            export SENDGRID_API_KEY=$SENDGRID_API_KEY
             cd "${{ secrets.REMOTE_DIR }}/creative-developments/backend"
             killall -9 node
             npm i
