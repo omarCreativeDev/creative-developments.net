@@ -19,7 +19,6 @@ app.post('/sendEmail', (req, res) => {
 });
 
 async function sendMail(data, callback) {
-  console.log('api key', process.env.SENDGRID_API_KEY);
   sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
   const msg = {
