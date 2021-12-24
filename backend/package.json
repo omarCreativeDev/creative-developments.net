@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo 'Error: no test specified' && exit 1",
     "start": "forever --minUptime 10000 --spinSleepTime 10000 -c 'nodemon --exitcrash' server.js",
-    "start:nodemon": "nodemon server.js"
+    "start:nodemon": "nodemon server.js",
+    "start:node": "node server.js"
   },
   "author": "Omar Mirza",
   "license": "ISC",
