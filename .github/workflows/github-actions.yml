@@ -41,7 +41,7 @@ jobs:
           # i.e, remove dist folder
           strip_components: 1
 
-      - name: start backend node server
+      - name: kill node and install backend dependencies
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.REMOTE_HOST }}
@@ -52,4 +52,14 @@ jobs:
             cd "${{ secrets.REMOTE_DIR }}/creative-developments/backend"
             killall -9 node
             npm i
+
+      - name: start backend node server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.PRIVATE_SSH_KEY }}
+          # kill node to bypass `EADDRINUSE, Address/port already in use` error
+          script: |
+            cd "${{ secrets.REMOTE_DIR }}/creative-developments/backend"
             npm run start &
