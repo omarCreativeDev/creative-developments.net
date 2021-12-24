@@ -51,7 +51,7 @@ jobs:
           script: |
             cd "${{ secrets.REMOTE_DIR }}/creative-developments/backend"
             killall -9 node
-            npm i
+            npm ci
 
       - name: start backend node server
         uses: appleboy/ssh-action@master
