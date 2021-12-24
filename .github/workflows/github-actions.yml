@@ -51,15 +51,17 @@ jobs:
           script: |
             cd "${{ secrets.REMOTE_DIR }}/creative-developments/backend"
             killall -9 node
-            npm ci
-
-      - name: start backend node server
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.REMOTE_HOST }}
-          username: ${{ secrets.REMOTE_USER }}
-          key: ${{ secrets.PRIVATE_SSH_KEY }}
-          # kill node to bypass `EADDRINUSE, Address/port already in use` error
-          script: |
-            cd "${{ secrets.REMOTE_DIR }}/creative-developments/backend"
+            npm i
+            sleep 30s
             npm run start:nodemon
+
+#      - name: start backend node server
+#        uses: appleboy/ssh-action@master
+#        with:
+#          host: ${{ secrets.REMOTE_HOST }}
+#          username: ${{ secrets.REMOTE_USER }}
+#          key: ${{ secrets.PRIVATE_SSH_KEY }}
+#          # kill node to bypass `EADDRINUSE, Address/port already in use` error
+#          script: |
+#            cd "${{ secrets.REMOTE_DIR }}/creative-developments/backend"
+#            npm run start:nodemon
