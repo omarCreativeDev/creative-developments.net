@@ -52,5 +52,4 @@ jobs:
             cd "${{ secrets.REMOTE_DIR }}/creative-developments/backend"
             killall -9 node
             npm i
-            sleep 10
-            npm run start:node
+            npm run start
