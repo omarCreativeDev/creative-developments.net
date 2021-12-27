@@ -24,7 +24,7 @@ async function sendMail(data, callback) {
   const msg = {
     to: 'omar.creative.dev@gmail.com', // list of receivers
     from: 'Omar Mirza <omar.creative.dev@gmail.com>', // sender address
-    subject: `Creative Developments enquiry from ${data.name}`, // Subject line
+    subject: `Creative Developments enquiry from ${data.name}`, // Subject line with sender name
     html: `<p><b>Name:</b> ${data.name}</p>
     <p><b>Phone:</b> ${data.phone}</p>
     <p><b>Email:</b> ${data.email}</p>
