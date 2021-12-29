@@ -5,7 +5,7 @@
     "prepare": "husky install",
     "ng": "ng",
     "start": "concurrently \"ng serve\" \"npm run start:server\"",
-    "start:server": "cd backend && npm run start:nodemon",
+    "start:server": "cd backend && npm run start",
     "build": "ng build",
     "build:prod": "ng build --configuration production",
     "test": "jest --verbose --coverage",
