@@ -41,7 +41,7 @@ jobs:
           # i.e, remove dist folder
           strip_components: 1
 
-      - name: kill node, install backend dependencies & start server
+      - name: install backend dependencies & start server using pm2
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.REMOTE_HOST }}
