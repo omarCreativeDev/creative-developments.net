@@ -1,9 +1,11 @@
 # Backend
 
-1. Install nodejs and npm:
+1. Install nodejs, npm and pm2:
 
 ```
-sudo apt install nodejs && sudo apt install npm
+sudo apt install nodejs
+sudo apt install npm
+npm i -g pm2
 ```
 
 2. Install NGINX:

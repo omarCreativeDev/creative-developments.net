@@ -51,4 +51,4 @@ jobs:
           script: |
             cd "${{ secrets.REMOTE_DIR }}/creative-developments/backend"
             npm i
-            npm run start
+            pm2 start npm -- start
