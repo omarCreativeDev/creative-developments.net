@@ -2,6 +2,28 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const sendgrid = require('@sendgrid/mail');
+const mongoose = require('mongoose');
+const username = 'omarCreativeDev';
+const password = 'mpu9kte3axh5wek.QEV';
+const cluster = 'zion';
+const dbname = 'portfolio';
+
+/**
+mongoose.connect(
+  `mongodb+srv://${username}:${password}@${cluster}.aaeakjk.mongodb.net/${dbname}?retryWrites=true&w=majority`,
+  {
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true
+  }
+);
+
+ const db = mongoose.connection;
+ db.on("error", console.error.bind(console, "connection error: "));
+ db.once("open", function () {
+  console.log("Connected successfully");
+});
+ **/
 
 const app = express();
 app.use(cors({ origin: '*' }));
