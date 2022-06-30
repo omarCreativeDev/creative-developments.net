@@ -4,26 +4,19 @@ const bodyParser = require('body-parser');
 const sendgrid = require('@sendgrid/mail');
 const mongoose = require('mongoose');
 const username = 'omarCreativeDev';
-const password = 'mpu9kte3axh5wek.QEV';
+const password = process.env.MONGODB_PASSWORD;
 const cluster = 'zion';
 const dbname = 'portfolio';
 
-/**
 mongoose.connect(
-  `mongodb+srv://${username}:${password}@${cluster}.aaeakjk.mongodb.net/${dbname}?retryWrites=true&w=majority`,
-  {
-    useNewUrlParser: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true
-  }
+  `mongodb+srv://${username}:${password}@${cluster}.aaeakjk.mongodb.net/${dbname}?retryWrites=true&w=majority`
 );
 
- const db = mongoose.connection;
- db.on("error", console.error.bind(console, "connection error: "));
- db.once("open", function () {
-  console.log("Connected successfully");
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error: '));
+db.once('open', function () {
+  console.log('Mongo DB connected successfully');
 });
- **/
 
 const app = express();
 app.use(cors({ origin: '*' }));
@@ -42,10 +35,11 @@ app.post('/sendEmail', (req, res) => {
 
 async function sendMail(data, callback) {
   sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
+  const emailAddress = 'omar.creative.dev@gmail.com';
 
   const msg = {
-    to: 'omar.creative.dev@gmail.com', // list of receivers
-    from: 'Omar Mirza <omar.creative.dev@gmail.com>', // sender address
+    to: emailAddress, // list of receivers
+    from: `Omar Mirza <${emailAddress}>`, // sender address
     subject: `Creative Developments enquiry from ${data.name}`, // Subject line with sender name
     html: `<p><b>Name:</b> ${data.name}</p>
     <p><b>Phone:</b> ${data.phone}</p>
