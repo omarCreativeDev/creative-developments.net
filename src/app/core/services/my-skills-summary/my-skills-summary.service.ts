@@ -1,9 +1,11 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ISkillGroup } from '@core/model/interfaces';
-import { BehaviorSubject } from 'rxjs';
+import { environment } from '@env/environment';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class MySkillsSummaryService {
   public groups: ISkillGroup[] = [
@@ -17,8 +19,8 @@ export class MySkillsSummaryService {
         { name: 'Responsive design', rating: '100' },
         { name: 'SASS / LESS', rating: '97' },
         { name: 'Flexbox', rating: '90' },
-        { name: 'BEM', rating: '90' },
-      ],
+        { name: 'BEM', rating: '90' }
+      ]
     },
     {
       label: 'UI Libraries',
@@ -27,8 +29,8 @@ export class MySkillsSummaryService {
         { name: 'Angular material', rating: '90' },
         { name: 'Bootstrap', rating: '95' },
         { name: 'GOV.UK design system (GDS)', rating: '90' },
-        { name: 'Clarity UI', rating: '85' },
-      ],
+        { name: 'Clarity UI', rating: '85' }
+      ]
     },
     {
       label: 'Javascript stack',
@@ -44,8 +46,8 @@ export class MySkillsSummaryService {
         { name: 'NPM / Yarn', rating: '90' },
         { name: 'Moment', rating: '90' },
         { name: 'Lo dash', rating: '90' },
-        { name: 'React', rating: '50' },
-      ],
+        { name: 'React', rating: '50' }
+      ]
     },
     {
       label: 'Unit testing',
@@ -54,8 +56,8 @@ export class MySkillsSummaryService {
         { name: 'Jasmine', rating: '90' },
         { name: 'Karma', rating: '85' },
         { name: 'Mocha', rating: '80' },
-        { name: 'Chai', rating: '80' },
-      ],
+        { name: 'Chai', rating: '80' }
+      ]
     },
     {
       label: 'E2E testing',
@@ -64,13 +66,16 @@ export class MySkillsSummaryService {
         { name: 'Protractor', rating: '85' },
         { name: 'Gherkin', rating: '85' },
         { name: 'Selenium', rating: '75' },
-        { name: 'Webdriver IO', rating: '75' },
-      ],
+        { name: 'Webdriver IO', rating: '75' }
+      ]
     },
     {
       label: 'Data Visualisation',
       active: false,
-      skills: [{ name: 'Highcharts', rating: '85' }, { name: 'Ng2 charts', rating: '85' }],
+      skills: [
+        { name: 'Highcharts', rating: '85' },
+        { name: 'Ng2 charts', rating: '85' }
+      ]
     },
     {
       label: 'REST',
@@ -79,8 +84,8 @@ export class MySkillsSummaryService {
         { name: 'RESTful API', rating: '85' },
         { name: 'Swagger', rating: '75' },
         { name: 'Postman', rating: '75' },
-        { name: 'Mocky', rating: '85' },
-      ],
+        { name: 'Mocky', rating: '85' }
+      ]
     },
     {
       label: 'Design',
@@ -88,13 +93,16 @@ export class MySkillsSummaryService {
       skills: [
         { name: 'Photoshop', rating: '75' },
         { name: 'Sketch', rating: '75' },
-        { name: 'Invision', rating: '75' },
-      ],
+        { name: 'Invision', rating: '75' }
+      ]
     },
     {
       label: 'State management',
       active: false,
-      skills: [{ name: 'NGRX', rating: '75' }, { name: 'NGXS', rating: '50' }],
+      skills: [
+        { name: 'NGRX', rating: '75' },
+        { name: 'NGXS', rating: '50' }
+      ]
     },
     {
       label: 'Code reviews',
@@ -102,8 +110,8 @@ export class MySkillsSummaryService {
       skills: [
         { name: 'Pull requests', rating: '90' },
         { name: 'Pair programming', rating: '90' },
-        { name: 'Crucible', rating: '75' },
-      ],
+        { name: 'Crucible', rating: '75' }
+      ]
     },
     {
       label: 'Devops',
@@ -112,9 +120,15 @@ export class MySkillsSummaryService {
         { name: 'Travis', rating: '70' },
         { name: 'Jenkins', rating: '65' },
         { name: 'Amazon web services', rating: '50' },
-        { name: 'Docker', rating: '65' },
-      ],
-    },
+        { name: 'Docker', rating: '65' }
+      ]
+    }
   ];
   public activeGroup: BehaviorSubject<ISkillGroup> = new BehaviorSubject(this.groups[2]);
+
+  constructor(private http: HttpClient) {}
+
+  public list(): Observable<any> {
+    return this.http.get<any>(`${environment.url}/skills`);
+  }
 }

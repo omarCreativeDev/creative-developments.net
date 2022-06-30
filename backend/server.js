@@ -7,14 +7,14 @@ const username = 'omarCreativeDev';
 const password = process.env.MONGODB_PASSWORD;
 const cluster = 'zion';
 const dbname = 'portfolio';
+const { connection } = mongoose;
 
 mongoose.connect(
   `mongodb+srv://${username}:${password}@${cluster}.aaeakjk.mongodb.net/${dbname}?retryWrites=true&w=majority`
 );
 
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error: '));
-db.once('open', function () {
+connection.on('error', console.error.bind(console, 'connection error: '));
+connection.once('open', function () {
   console.log('Mongo DB connected successfully');
 });
 
@@ -27,10 +27,22 @@ app.listen(3000, () => {
 });
 
 app.post('/sendEmail', (req, res) => {
-  let body = req.body;
+  const { body } = req;
   sendMail(body, () => {
     res.send();
   }).catch((error) => console.log('error', error));
+});
+
+app.get('/skills', async (req, res) => {
+  const collection = connection.db.collection('skills');
+
+  collection.find({}).toArray((err, result) => {
+    if (err) {
+      res.status(400).send('Error fetching skills!');
+    } else {
+      res.json(result);
+    }
+  });
 });
 
 async function sendMail(data, callback) {
