@@ -1,3 +1,4 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MySkillsPageComponent } from './my-skills-page.component';
@@ -11,7 +12,8 @@ describe('MySkillsPageComponent', () => {
     waitForAsync(() => {
       TestBed.configureTestingModule({
         declarations: [MySkillsPageComponent],
-        schemas: [CUSTOM_ELEMENTS_SCHEMA],
+        imports: [HttpClientTestingModule],
+        schemas: [CUSTOM_ELEMENTS_SCHEMA]
       }).compileComponents();
     })
   );
