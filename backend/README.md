@@ -27,8 +27,9 @@ sudo nginx -t
 sudo nginx -s reload
 ```
 
-5. Ensure send grid variable exists in webserver bashrc / bashprofile:
+5. Ensure required variables exists on webserver bashrc / bashprofile:
 
 ```
 export SENDGRID_API_KEY=xxx
+export MONGODB_PASSWORD=xxx
 ```

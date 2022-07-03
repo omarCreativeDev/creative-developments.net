@@ -34,6 +34,7 @@ app.post('/sendEmail', (req, res) => {
 });
 
 app.get('/skills', async (req, res) => {
+  console.log('skills api fired');
   const collection = connection.db.collection('skills');
 
   collection.find({}).toArray((err, result) => {
