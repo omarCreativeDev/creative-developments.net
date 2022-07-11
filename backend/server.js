@@ -36,7 +36,7 @@ app.post('/sendEmail', (req, res) => {
 app.get('/skills', async (req, res) => {
   const collection = connection.db.collection('skills');
 
-  collection.find({}).toArray((err, result) => {
+  collection.findOne({}, (err, result) => {
     if (err) {
       res.status(400).send('Error fetching skills!');
     } else {
