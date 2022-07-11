@@ -51,4 +51,4 @@ jobs:
           script: |
             cd "${{ secrets.REMOTE_DIR }}/creative-developments/backend"
             npm i
-            pm2 start npm -- start
+            pm2 restart server.js
