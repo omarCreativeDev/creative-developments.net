@@ -7,7 +7,7 @@ const EasyPieChart = require('easy-pie-chart');
   styleUrls: ['./my-skill-chart.component.scss']
 })
 export class MySkillChartComponent implements AfterViewInit, OnDestroy {
-  @Input() public rating: string;
+  @Input() public rating: number;
   @Input() public name: string;
   @ViewChild('chartEl') public chartEl: ElementRef;
   public chart: typeof EasyPieChart;

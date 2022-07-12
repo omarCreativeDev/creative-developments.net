@@ -11,15 +11,22 @@ export interface IRecommendation {
   role: string;
 }
 
+export interface ISkillsResponse {
+  _id: string;
+  title: string;
+  groups: ISkillGroup[];
+}
+
 export interface ISkillGroup {
   active: boolean;
-  label: string;
-  skills: ISkillDetails[];
+  category: string;
+  list: ISkillDetails[];
 }
 
 export interface ISkillDetails {
+  isCore: boolean;
   name: string;
-  rating: string;
+  rating: number;
 }
 
 export interface IErrorDetails {

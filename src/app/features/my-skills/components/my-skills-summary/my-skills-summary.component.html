@@ -5,8 +5,12 @@
     [class.my-skills-summary__active-group]="group.active"
     (click)="toggleVisibility(group)"
   >
-    <dt class="my-skills-summary__label">{{ group.label }}</dt>
-    <dd *ngFor="let skill of group.skills" class="my-skills-summary__item" [class.d-none]="!group.active">
+    <dt class="my-skills-summary__label">{{ group.category }}</dt>
+    <dd
+      *ngFor="let skill of group.list"
+      class="my-skills-summary__item"
+      [class.d-none]="!group.active"
+    >
       {{ skill.name }}
     </dd>
   </dl>

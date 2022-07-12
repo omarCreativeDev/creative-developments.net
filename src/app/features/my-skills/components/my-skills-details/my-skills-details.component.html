@@ -1,6 +1,10 @@
 <article *ngIf="activeGroup$ | async as group">
   <div class="clearfix">
-    <h2>{{ group.label }}</h2>
-    <app-my-skill-chart *ngFor="let i of group.skills" [rating]="i.rating" [name]="i.name"></app-my-skill-chart>
+    <h2>{{ group.category }}</h2>
+    <app-my-skill-chart
+      *ngFor="let i of group.list"
+      [rating]="i.rating"
+      [name]="i.name"
+    ></app-my-skill-chart>
   </div>
 </article>
