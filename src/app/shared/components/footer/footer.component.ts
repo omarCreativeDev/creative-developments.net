@@ -10,14 +10,13 @@ import {
   faLinkedinIn,
   faOpera,
   faSafari,
-  faSkype,
-  faTwitter,
+  faTwitter
 } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss'],
+  styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
   public faArrowUp: IconDefinition = faArrowUp;
@@ -32,6 +31,5 @@ export class FooterComponent {
   public faOpera: IconDefinition = faOpera;
   public faPhone: IconDefinition = faPhone;
   public faSafari: IconDefinition = faSafari;
-  public faSkype: IconDefinition = faSkype;
   public faTwitter: IconDefinition = faTwitter;
 }
