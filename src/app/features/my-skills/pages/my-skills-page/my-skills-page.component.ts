@@ -24,8 +24,8 @@ export class MySkillsPageComponent implements OnInit {
 
   private setSkills(skills: ISkillGroup[]) {
     this.groups = skills;
-    this.groups[2].active = true;
-    this.mySkillsSummaryService.activeGroup$.next(this.groups[2]);
+    this.groups[1].active = true;
+    this.mySkillsSummaryService.activeGroup$.next(this.groups[1]);
     this.mySkillsSummaryService.groups$.next(this.groups);
   }
 }
