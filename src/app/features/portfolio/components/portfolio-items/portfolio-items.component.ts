@@ -6,7 +6,7 @@ const imagesLoaded = require('imagesloaded');
 @Component({
   selector: 'app-portfolio-items',
   templateUrl: './portfolio-items.component.html',
-  styleUrls: ['./portfolio-items.component.scss'],
+  styleUrls: ['./portfolio-items.component.scss']
 })
 export class PortfolioItemsComponent implements AfterViewInit {
   @ViewChild('masonryEl') public masonryEl: NgxMasonryComponent;
@@ -14,133 +14,125 @@ export class PortfolioItemsComponent implements AfterViewInit {
   public portFolioLoading = true;
   public portfolioItems: IShowcaseItem[] = [
     {
+      caption: 'Skills For Care | User accounts',
+      imageName: 'skills-for-care-user-accounts.png'
+    },
+    {
+      caption: 'Skills For Care | Edit account details',
+      imageName: 'skills-for-care-edit-account-details.png'
+    },
+    {
+      caption: 'Skills For Care | Edit account permissions',
+      imageName: 'skills-for-care-edit-account-permissions.png'
+    },
+    {
       caption: 'Addison Lee | Booking Desktop',
-      imageName: 'addison-lee-booking-desktop',
+      imageName: 'addison-lee-booking-desktop.jpg'
     },
     {
       caption: 'Addison Lee | Booking Mobile',
-      imageName: 'addison-lee-booking-mobile',
+      imageName: 'addison-lee-booking-mobile.jpg'
     },
     {
       caption: 'Addison Lee | Dashboard Desktop',
-      imageName: 'addison-lee-dashboard-desktop',
+      imageName: 'addison-lee-dashboard-desktop.jpg'
     },
     {
       caption: 'Addison Lee | Dashboard Mobile',
-      imageName: 'addison-lee-dashboard-mobile',
+      imageName: 'addison-lee-dashboard-mobile.jpg'
     },
     {
       caption: 'Nhs | revalidation',
-      imageName: 'nhs-revalidation',
+      imageName: 'nhs-revalidation.jpg'
     },
     {
       caption: 'Nhs | Evidence',
-      imageName: 'nhs-evidence',
+      imageName: 'nhs-evidence.jpg'
     },
     {
       caption: 'Nhs | Concerns',
-      imageName: 'nhs-concerns',
+      imageName: 'nhs-concerns.jpg'
     },
     {
       caption: 'Interoute | Pricing',
-      imageName: 'interoute-pricing',
+      imageName: 'interoute-pricing.jpg'
     },
     {
       caption: 'Interoute | Basket',
-      imageName: 'interoute-basket',
+      imageName: 'interoute-basket.jpg'
     },
     {
       caption: 'Interoute | Deployment',
-      imageName: 'interoute-quick-deployment',
+      imageName: 'interoute-quick-deployment.jpg'
     },
     {
       caption: 'AUDI UK | Car Details',
-      imageName: 'myAudi-carDetails',
+      imageName: 'myAudi-carDetails.jpg'
     },
     {
       caption: 'AUDI UK | Login',
-      imageName: 'myAudi-login',
+      imageName: 'myAudi-login.jpg'
     },
     {
       caption: 'AUDI UK | Profile',
-      imageName: 'myAudi-profile',
+      imageName: 'myAudi-profile.jpg'
     },
     {
       caption: 'EF ICE Awards',
-      imageName: 'efIceAwards',
+      imageName: 'efIceAwards.jpg'
     },
     {
       caption: 'EF ICE Awards Tablet',
-      imageName: 'efIceAwardsTablet',
+      imageName: 'efIceAwardsTablet.jpg'
     },
     {
       caption: 'EF ICE Awards Mobile',
-      imageName: 'efIceAwardsMobile',
+      imageName: 'efIceAwardsMobile.jpg'
     },
     {
       caption: 'Rapid Motor Services',
-      imageName: 'rapid-motor-services',
+      imageName: 'rapid-motor-services.jpg'
     },
     {
       caption: 'Bizrate UK',
-      imageName: 'bizrateUK',
+      imageName: 'bizrateUK.jpg'
     },
     {
       caption: 'Bizrate DE',
-      imageName: 'bizrateDE',
-    },
-    {
-      caption: 'Cybershop UK',
-      imageName: 'cybershop-uk',
-    },
-    {
-      caption: 'Uz Fashion Ebay Shop',
-      imageName: 'uz-fashion',
+      imageName: 'bizrateDE.jpg'
     },
     {
       caption: 'Uz Fashion Logo',
-      imageName: 'uz-fashion-logo',
+      imageName: 'uz-fashion-logo.jpg'
     },
     {
       caption: 'Purina | Together We Can',
-      imageName: 'together-we-can-recycle',
+      imageName: 'together-we-can-recycle.jpg'
     },
     {
       caption: 'Shop BlackBerry',
-      imageName: 'shop-blackberry',
-    },
-    {
-      caption: 'Affair Travel',
-      imageName: 'affair-travel',
-    },
-    {
-      caption: 'Affair Travel Email',
-      imageName: 'affair-travel-email',
+      imageName: 'shop-blackberry.jpg'
     },
     {
       caption: 'Air Transat',
-      imageName: 'airtransat',
+      imageName: 'airtransat.jpg'
     },
     {
       caption: 'Canadian Affair',
-      imageName: 'canadian-affair',
+      imageName: 'canadian-affair.jpg'
     },
     {
       caption: 'Lawson Rutter',
-      imageName: 'lawson-rutter',
+      imageName: 'lawson-rutter.jpg'
     },
     {
       caption: 'Go Compare Broadband',
-      imageName: 'gocompare-broadband',
-    },
-    {
-      caption: 'I Spy Tracking',
-      imageName: 'i-spy-tracking',
+      imageName: 'gocompare-broadband.jpg'
     },
     {
       caption: 'Confused Broadband',
-      imageName: 'confused-broadband',
-    },
+      imageName: 'confused-broadband.jpg'
+    }
   ];
 
   ngAfterViewInit(): void {

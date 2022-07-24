@@ -6,15 +6,19 @@
 ></span>
 
 <ngx-masonry #masonryEl [class.invisible]="portFolioLoading">
-  <div ngxMasonryItem class="masonry-item col-sm-6 col-md-4 col-lg-3 mb-5" *ngFor="let i of portfolioItems">
+  <div
+    ngxMasonryItem
+    class="masonry-item col-sm-6 col-md-4 col-lg-3 mb-5"
+    *ngFor="let i of portfolioItems"
+  >
     <a
       [attr.data-fancybox]="'group1'"
       [attr.data-title]="i.caption"
-      href="/assets/images/portfolio/{{ i.imageName }}.jpg"
+      href="/assets/images/portfolio/{{ i.imageName }}"
       class="portfolio-item__client-link mb-4 d-block"
     >
       <img
-        src="/assets/images/portfolio/{{ i.imageName }}.jpg"
+        src="/assets/images/portfolio/{{ i.imageName }}"
         class="portfolio-item__client-img w-100"
         alt="{{ i.caption }}"
       />
