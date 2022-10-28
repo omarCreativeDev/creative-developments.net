@@ -1,6 +1,6 @@
 # Backend
 
-1. Install nodejs, NGINX, npm and pm2:
+1. Install nodejs, NGINX, npm and pm2 on webserver:
 
 ```
 sudo apt install nodejs
@@ -58,4 +58,18 @@ pm2 describe <id|app_name>
 
 ```
 pm2 monit
+```
+
+## Troubleshooting
+
+If the backend is not running, ssh to webserver `ssh creativedevelopments.net`and navigate to the backend directory:
+
+```
+`/var/www/creative-developments/backend`
+```
+
+and run:
+
+```
+pm2 start server.js
 ```
