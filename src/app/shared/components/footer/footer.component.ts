@@ -7,10 +7,8 @@ import {
   faFirefox,
   faGithub,
   faInternetExplorer,
-  faLinkedinIn,
   faOpera,
-  faSafari,
-  faTwitter
+  faSafari
 } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
@@ -27,9 +25,7 @@ export class FooterComponent {
   public faFirefox: IconDefinition = faFirefox;
   public faGithub: IconDefinition = faGithub;
   public faInternetExplorer: IconDefinition = faInternetExplorer;
-  public faLinkedinIn: IconDefinition = faLinkedinIn;
   public faOpera: IconDefinition = faOpera;
   public faPhone: IconDefinition = faPhone;
   public faSafari: IconDefinition = faSafari;
-  public faTwitter: IconDefinition = faTwitter;
 }

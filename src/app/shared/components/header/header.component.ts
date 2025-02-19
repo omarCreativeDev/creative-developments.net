@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faBitbucket, faGithub, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faBitbucket, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 
 @Component({
@@ -8,8 +8,6 @@ import { IconDefinition } from '@fortawesome/fontawesome-common-types';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  public faLinkedinIn: IconDefinition = faLinkedinIn;
-  public faTwitter: any = faTwitter;
   public faGithub: IconDefinition = faGithub;
   public faBitbucket: IconDefinition = faBitbucket;
 }
