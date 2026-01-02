@@ -51,4 +51,5 @@ jobs:
           script: |
             cd "${{ secrets.REMOTE_DIR }}/creative-developments/backend"
             npm i
-            pm2 restart server.js
+            pm2 start server.js --name creative-developments-api || pm2 restart creative-developments-api
+            pm2 save
